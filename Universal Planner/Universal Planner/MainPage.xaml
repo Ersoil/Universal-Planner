@@ -7,11 +7,18 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Componets/Resources/main.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
     <SplitView x:Name="NavigationMenu">
         <SplitView.Pane>
             <RelativePanel>
                 <StackPanel RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True">
-                    <TextBlock Margin="10 20 10 40" Foreground="{ThemeResource SystemAccentColor}" FontWeight="ExtraLight" FontSize="34" FontFamily="Segoe UI">Меню</TextBlock>
+                    <TextBlock Margin="10 20 10 40" FontWeight="ExtraLight" FontSize="34" FontFamily="Segoe UI">Меню</TextBlock>
                     <ListBox>
                         <ListBoxItem Background="{Binding ElementName=NavigationMenu, Path=PaneBackground, Mode=OneWay}">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
@@ -64,14 +71,24 @@
                     <Grid HorizontalAlignment="Stretch" Grid.Row="0" Background="Transparent" x:Name="AppTitleBar">
 
                     </Grid>
-                    <StackPanel Grid.Row="0">
-                    <Button VerticalAlignment="Stretch"  Background="Transparent" Click="Button_Click">
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
-                            <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE700;" Margin="0 0 10 0"/>
-                            <TextBlock Text="меню" FontWeight="ExtraLight" VerticalAlignment="Center" TextAlignment="Center" HorizontalAlignment="Stretch"/>
+                    <RelativePanel Grid.Row="0">
+                        <StackPanel RelativePanel.AlignLeftWithPanel="True">
+                            <Button Template="{StaticResource headerButton}" VerticalAlignment="Stretch" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Background="Transparent" Click="Button_Click">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE700;" Margin="0 0 10 0"/>
+                                    <TextBlock Text="меню" FontWeight="ExtraLight" VerticalAlignment="Center" TextAlignment="Center" HorizontalAlignment="Stretch"/>
+                                </StackPanel>
+                            </Button>
                         </StackPanel>
-                    </Button>
-                </StackPanel>
+                        <StackPanel RelativePanel.AlignHorizontalCenterWithPanel="True">
+                            <Button Template="{StaticResource headerButton}" VerticalAlignment="Stretch" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Background="{ThemeResource SystemAccentColorLight3}" Click="Button_Click">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE712;" Margin="0 0 10 0"/>
+                                    <TextBlock Text="дополнительно" FontWeight="ExtraLight" VerticalAlignment="Center" TextAlignment="Center" HorizontalAlignment="Stretch"/>
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+                    </RelativePanel>
                 </Grid>
                 <Grid Grid.Row="1">
                     <Frame x:Name="MainFrame"></Frame>
