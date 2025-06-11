@@ -132,17 +132,19 @@ namespace Universal_Planner.Universal_Planner_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[4];
-            _typeNameTable[0] = "Universal_Planner.MainPage";
+            _typeNameTable = new string[5];
+            _typeNameTable[0] = "Universal_Planner.Componets.Resources.planner";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "Universal_Planner.Pages.StartScreen";
+            _typeNameTable[3] = "Universal_Planner.MainPage";
+            _typeNameTable[4] = "Universal_Planner.Pages.StartScreen";
 
-            _typeTable = new global::System.Type[4];
-            _typeTable[0] = typeof(global::Universal_Planner.MainPage);
+            _typeTable = new global::System.Type[5];
+            _typeTable[0] = typeof(global::Universal_Planner.Componets.Resources.planner);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::Universal_Planner.Pages.StartScreen);
+            _typeTable[3] = typeof(global::Universal_Planner.MainPage);
+            _typeTable[4] = typeof(global::Universal_Planner.Pages.StartScreen);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -177,8 +179,9 @@ namespace Universal_Planner.Universal_Planner_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_MainPage() { return new global::Universal_Planner.MainPage(); }
-        private object Activate_3_StartScreen() { return new global::Universal_Planner.Pages.StartScreen(); }
+        private object Activate_0_planner() { return new global::Universal_Planner.Componets.Resources.planner(); }
+        private object Activate_3_MainPage() { return new global::Universal_Planner.MainPage(); }
+        private object Activate_4_StartScreen() { return new global::Universal_Planner.Pages.StartScreen(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -190,9 +193,9 @@ namespace Universal_Planner.Universal_Planner_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  Universal_Planner.MainPage
+            case 0:   //  Universal_Planner.Componets.Resources.planner
                 userType = new global::Universal_Planner.Universal_Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_MainPage;
+                userType.Activator = Activate_0_planner;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -205,9 +208,16 @@ namespace Universal_Planner.Universal_Planner_XamlTypeInfo
                 xamlType = new global::Universal_Planner.Universal_Planner_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  Universal_Planner.Pages.StartScreen
+            case 3:   //  Universal_Planner.MainPage
                 userType = new global::Universal_Planner.Universal_Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_StartScreen;
+                userType.Activator = Activate_3_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 4:   //  Universal_Planner.Pages.StartScreen
+                userType = new global::Universal_Planner.Universal_Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_4_StartScreen;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

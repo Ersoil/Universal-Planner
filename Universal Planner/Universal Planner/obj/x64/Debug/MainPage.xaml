@@ -73,18 +73,10 @@
                     </Grid>
                     <RelativePanel Grid.Row="0">
                         <StackPanel RelativePanel.AlignLeftWithPanel="True">
-                            <Button x:ConnectionId='6' Template="{StaticResource headerButton}" VerticalAlignment="Stretch" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Background="Transparent"                     >
+                            <Button x:ConnectionId='5' Template="{StaticResource headerButton}" VerticalAlignment="Stretch" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Background="Transparent"                     >
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
                                     <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE700;" Margin="0 0 10 0"/>
                                     <TextBlock Text="меню" FontWeight="ExtraLight" VerticalAlignment="Center" TextAlignment="Center" HorizontalAlignment="Stretch"/>
-                                </StackPanel>
-                            </Button>
-                        </StackPanel>
-                        <StackPanel RelativePanel.AlignHorizontalCenterWithPanel="True">
-                            <Button x:ConnectionId='5' Template="{StaticResource headerButton}" VerticalAlignment="Stretch" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Background="{ThemeResource SystemAccentColorLight3}"                     >
-                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
-                                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE712;" Margin="0 0 10 0"/>
-                                    <TextBlock Text="дополнительно" FontWeight="ExtraLight" VerticalAlignment="Center" TextAlignment="Center" HorizontalAlignment="Stretch"/>
                                 </StackPanel>
                             </Button>
                         </StackPanel>

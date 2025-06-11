@@ -224,3 +224,8 @@ C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\ob
 C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Componets\Resources\main.xbf
 C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\obj\x64\Debug\Componets\Resources\main.xaml
 C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\obj\x64\Debug\Componets\Resources\main.xbf
+C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\obj\x64\Debug\Pages\planner.g.i.cs
+C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\obj\x64\Debug\Pages\planner.g.cs
+C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\obj\x64\Debug\Pages\planner.xaml
+C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\obj\x64\Debug\Pages\planner.xbf
+C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Pages\planner.xbf

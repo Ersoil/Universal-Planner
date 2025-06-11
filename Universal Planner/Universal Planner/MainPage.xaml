@@ -80,14 +80,6 @@
                                 </StackPanel>
                             </Button>
                         </StackPanel>
-                        <StackPanel RelativePanel.AlignHorizontalCenterWithPanel="True">
-                            <Button Template="{StaticResource headerButton}" VerticalAlignment="Stretch" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Background="{ThemeResource SystemAccentColorLight3}" Click="Button_Click">
-                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
-                                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE712;" Margin="0 0 10 0"/>
-                                    <TextBlock Text="дополнительно" FontWeight="ExtraLight" VerticalAlignment="Center" TextAlignment="Center" HorizontalAlignment="Stretch"/>
-                                </StackPanel>
-                            </Button>
-                        </StackPanel>
                     </RelativePanel>
                 </Grid>
                 <Grid Grid.Row="1">

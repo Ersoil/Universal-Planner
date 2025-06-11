@@ -30,7 +30,7 @@ namespace Universal_Planner
             var coreTitleBar = CoreApplication.GetCurrentView().TitleBar;
             coreTitleBar.ExtendViewIntoTitleBar = true;
             Window.Current.SetTitleBar(AppTitleBar);
-            MainFrame.Navigate(typeof(StartScreen));
+            MainFrame.Navigate(typeof(Componets.Resources.planner));
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
