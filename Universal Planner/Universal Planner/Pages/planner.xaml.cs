@@ -35,6 +35,14 @@ namespace Universal_Planner.Componets.Resources
                 new UTask(),
                 new UTask(),
                 new UTask(),
+                new UTask(),
+                new UTask(),
+                new UTask(),
+                new UTask(),
+                new UTask(),
+                new UTask(),
+                new UTask(),
+                new UTask(),
                 new UTask()
             }
             );

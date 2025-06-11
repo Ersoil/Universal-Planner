@@ -13,35 +13,94 @@
             <ColumnDefinition Width="0.4*"></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-
-        <Grid Column="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Grid.ColumnSpan="2">
+            <TextBlock Text="Планирование" FontWeight="ExtraLight" FontSize="64" Foreground="{ThemeResource SystemAccentColor}"/>
+        </Grid>
+        <Grid Column="0" Grid.Row="1">
+            
+            <ScrollViewer>
             <StackPanel>
-                <TextBlock Text="Задачи" Margin="0 0 0 20" x:Name="Header" FontWeight="ExtraLight" FontSize="64" Foreground="{ThemeResource SystemAccentColor}"/>
 
-                <ListView ItemsSource="{Binding TaskViewList}">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <RelativePanel HorizontalAlignment="Stretch" Background="{ThemeResource SystemAccentColorDark1}">
-                                <StackPanel Margin="20 10 0 0" >
-                                    <TextBlock Text="{Binding Title}" Foreground="White"/>
-                                    <TextBlock Text="{Binding Description}" Foreground="White" Margin="15"/>
-                                </StackPanel>
-                                <TextBlock Text="{Binding DueDate}" Foreground="White" Margin="5" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True"/>
-                            </RelativePanel>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                    
-                    <ListView.ItemContainerStyle>
-                        <Style TargetType="ListViewItem">
-                            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
-                            <Setter Property="BorderThickness" Value="0"/>
-                            <Setter Property="Padding" Value="0"/>
-                            <Setter Property="Margin" Value="0,2"/>
-                            <Setter Property="Background" Value="Transparent"/>
-                        </Style>
-                    </ListView.ItemContainerStyle>
-                </ListView>
-            </StackPanel>
+                    <TextBlock Text="Задачи" Margin="0 0 0 10" x:Name="ListHeader" FontWeight="ExtraLight" FontSize="32" Foreground="{ThemeResource SystemAccentColorDark1}"/>
+                    <Border BorderThickness="1" BorderBrush="{ThemeResource SystemAccentColorDark1}"/>
+                    <ListView ItemsSource="{Binding TaskViewList}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <RelativePanel HorizontalAlignment="Stretch" Background="{ThemeResource SystemAccentColorDark1}">
+                                    <StackPanel Margin="20 10 0 0" >
+                                        <TextBlock FontWeight="ExtraLight" FontSize="18" Text="{Binding Title}" Foreground="White"/>
+                                        <TextBlock Text="{Binding Description}" Foreground="White" Margin="15"/>
+                                    </StackPanel>
+                                    <Grid Background="Yellow" MinWidth="90" Margin="0,0,20,0" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True">
+                                        <TextBlock HorizontalAlignment="Stretch" TextAlignment="Center" Foreground="Black" Text="#Tag"/>
+                                    </Grid>
+                                    <TextBlock Text="{Binding DueDate}" Foreground="White" Margin="5" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True"/>
+                                </RelativePanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+
+                        <ListView.ItemContainerStyle>
+                            <Style TargetType="ListViewItem">
+                                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                                <Setter Property="BorderThickness" Value="0"/>
+                                <Setter Property="Padding" Value="0"/>
+                                <Setter Property="Margin" Value="0,2"/>
+                                <Setter Property="Background" Value="Transparent"/>
+                            </Style>
+                        </ListView.ItemContainerStyle>
+                    </ListView>
+                </StackPanel> 
+            
+        </ScrollViewer>
+            
+            
+        </Grid>
+        <Grid Column="1" Row="1" Margin="30 0 0 0">
+            <ScrollViewer>
+                <StackPanel>
+                    <TextBlock Text="Имя задачи" Margin="0 0 0 10" x:Name="TaskName" FontWeight="ExtraLight" FontSize="32" Foreground="{ThemeResource SystemAccentColorDark1}"/>
+                    <Border BorderThickness="1" BorderBrush="{ThemeResource SystemAccentColorDark1}"/>
+                    <Grid Margin="30" VerticalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <StackPanel Grid.ColumnSpan="2" Grid.Row="0">
+                            <TextBlock Text="Описание" FontWeight="Light" FontSize="26"/>
+                            <RichEditBox Margin="40,30,40,00" MinHeight="200"/>
+                            <CommandBar Margin="40,0,40,30" >
+                                <AppBarButton Icon="Bold"></AppBarButton>
+                                <AppBarButton Icon="Italic"></AppBarButton>
+                                <AppBarButton Icon="FontColor"></AppBarButton>
+                                <AppBarSeparator></AppBarSeparator>
+                            </CommandBar>
+                        </StackPanel>
+                        <StackPanel Grid.Column="0" Grid.Row="1">
+                            <TextBlock Text="Дата вполнения" FontWeight="Light" FontSize="26"/>
+                            <DatePicker Margin="40,30,40,0"/>
+                        </StackPanel>
+                        <StackPanel Grid.Column="1" Grid.Row="1">
+                            <TextBlock Text="Напомнить" FontWeight="Light" FontSize="26"/>
+                            <CalendarView Margin="40,30,40,0"/>
+                            <TimePicker Margin="40,30,40,0"/>
+                        </StackPanel>
+                        <StackPanel Grid.ColumnSpan="2" Grid.Row="2">
+                            <TextBlock Text="Файлы и заметки" FontWeight="Light" FontSize="26"/>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+
+            </ScrollViewer>
         </Grid>
     </Grid>
 </Page>
