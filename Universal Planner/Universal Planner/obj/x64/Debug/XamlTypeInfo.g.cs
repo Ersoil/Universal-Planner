@@ -133,14 +133,14 @@ namespace Universal_Planner.Universal_Planner_XamlTypeInfo
         private void InitTypeTables()
         {
             _typeNameTable = new string[5];
-            _typeNameTable[0] = "Universal_Planner.Componets.Resources.planner";
+            _typeNameTable[0] = "Universal_Planner.Pages.planner";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[3] = "Universal_Planner.MainPage";
             _typeNameTable[4] = "Universal_Planner.Pages.StartScreen";
 
             _typeTable = new global::System.Type[5];
-            _typeTable[0] = typeof(global::Universal_Planner.Componets.Resources.planner);
+            _typeTable[0] = typeof(global::Universal_Planner.Pages.planner);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[3] = typeof(global::Universal_Planner.MainPage);
@@ -179,7 +179,7 @@ namespace Universal_Planner.Universal_Planner_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_planner() { return new global::Universal_Planner.Componets.Resources.planner(); }
+        private object Activate_0_planner() { return new global::Universal_Planner.Pages.planner(); }
         private object Activate_3_MainPage() { return new global::Universal_Planner.MainPage(); }
         private object Activate_4_StartScreen() { return new global::Universal_Planner.Pages.StartScreen(); }
 
@@ -193,7 +193,7 @@ namespace Universal_Planner.Universal_Planner_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  Universal_Planner.Componets.Resources.planner
+            case 0:   //  Universal_Planner.Pages.planner
                 userType = new global::Universal_Planner.Universal_Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_0_planner;
                 userType.SetIsLocalType();

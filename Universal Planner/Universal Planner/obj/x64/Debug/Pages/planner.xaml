@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="Universal_Planner.Componets.Resources.planner"
+    x:Class="Universal_Planner.Pages.planner"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Universal_Planner.Componets.Resources"

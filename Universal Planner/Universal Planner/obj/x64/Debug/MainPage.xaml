@@ -19,7 +19,7 @@
             <RelativePanel>
                 <StackPanel RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True">
                     <TextBlock Margin="10 20 10 40" FontWeight="ExtraLight" FontSize="34" FontFamily="Segoe UI">Меню</TextBlock>
-                    <ListBox>
+                    <ListBox x:ConnectionId='3' x:Name="PageIndex"                           >
                         <ListBoxItem Background="{Binding ElementName=NavigationMenu, Path=PaneBackground, Mode=OneWay}">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
                                 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xECA5;" Margin="0 0 10 0" Foreground="{ThemeResource SystemAccentColor}"/>
@@ -68,12 +68,12 @@
                 </Grid.RowDefinitions>
                 
                 <Grid Grid.Row="0">
-                    <Grid x:ConnectionId='4' HorizontalAlignment="Stretch" Grid.Row="0" Background="Transparent" x:Name="AppTitleBar">
+                    <Grid x:ConnectionId='5' HorizontalAlignment="Stretch" Grid.Row="0" Background="Transparent" x:Name="AppTitleBar">
 
                     </Grid>
                     <RelativePanel Grid.Row="0">
                         <StackPanel RelativePanel.AlignLeftWithPanel="True">
-                            <Button x:ConnectionId='5' Template="{StaticResource headerButton}" VerticalAlignment="Stretch" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Background="Transparent"                     >
+                            <Button x:ConnectionId='6' Template="{StaticResource headerButton}" VerticalAlignment="Stretch" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Background="Transparent"                     >
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
                                     <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE700;" Margin="0 0 10 0"/>
                                     <TextBlock Text="меню" FontWeight="ExtraLight" VerticalAlignment="Center" TextAlignment="Center" HorizontalAlignment="Stretch"/>
@@ -83,7 +83,7 @@
                     </RelativePanel>
                 </Grid>
                 <Grid Grid.Row="1">
-                    <Frame x:ConnectionId='3' x:Name="MainFrame"></Frame>
+                    <Frame x:ConnectionId='4' x:Name="MainFrame"></Frame>
                 </Grid>
             </Grid>
         </SplitView.Content>

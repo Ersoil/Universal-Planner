@@ -30,12 +30,28 @@ namespace Universal_Planner
             var coreTitleBar = CoreApplication.GetCurrentView().TitleBar;
             coreTitleBar.ExtendViewIntoTitleBar = true;
             Window.Current.SetTitleBar(AppTitleBar);
-            MainFrame.Navigate(typeof(Componets.Resources.planner));
+            MainFrame.Navigate(typeof(StartScreen));
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             NavigationMenu.IsPaneOpen = !NavigationMenu.IsPaneOpen;
+        }
+
+        private void PageIndex_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            switch (PageIndex.SelectedIndex)
+            {
+                case 0:
+                    MainFrame.Navigate(typeof(StartScreen));
+                    break;
+                case 1:
+                    MainFrame.Navigate(typeof(planner));
+                    break;
+                default:
+                    MainFrame.Navigate(typeof(StartScreen));
+                    break;
+            }
         }
     }
 }
