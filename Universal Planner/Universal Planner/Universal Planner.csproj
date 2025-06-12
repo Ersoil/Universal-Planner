@@ -119,7 +119,11 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Componets\Models\Tag.cs" />
     <Compile Include="Componets\Models\Task.cs" />
+    <Compile Include="Componets\Models\TaskTag.cs" />
+    <Compile Include="Componets\Models\User.cs" />
+    <Compile Include="Componets\viewModels\GloabalData.cs" />
     <Compile Include="Componets\viewModels\TaskViewModel.cs" />
     <Compile Include="Pages\planner.xaml.cs">
       <DependentUpon>planner.xaml</DependentUpon>

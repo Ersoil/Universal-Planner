@@ -8,7 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <RelativePanel Margin="80 20 20 20" >
-        <TextBlock Margin="0 0 0 20" x:Name="Header" FontWeight="ExtraLight" FontSize="64" Foreground="{ThemeResource SystemAccentColor}">Главная</TextBlock>
+        <TextBlock Margin="0 0 0 20" x:Name="Header" FontWeight="ExtraLight" FontSize="34" Foreground="{ThemeResource SystemAccentColor}">Главная</TextBlock>
         <Button RelativePanel.AlignRightWithPanel="True" Width="50" Height="50" VerticalAlignment="Center" Background="Transparent">
             <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE713;"></FontIcon>
         </Button>
@@ -28,7 +28,7 @@
                               RelativePanel.AlignTopWithPanel="True">
                         
                     </FontIcon>
-                    <TextBlock RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignBottomWithPanel="True">Параметры</TextBlock>
+                    <TextBlock FontSize="16" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignBottomWithPanel="True">Параметры</TextBlock>
                 </RelativePanel>
             </Button>
             <Button VariableSizedWrapGrid.ColumnSpan="2" Margin="2" VariableSizedWrapGrid.RowSpan="1" 
@@ -44,8 +44,8 @@
                 
             </Button>
             <StackPanel Margin="20 2" VariableSizedWrapGrid.ColumnSpan="6" VariableSizedWrapGrid.RowSpan="6">
-                <TextBlock FontWeight="Light" FontSize="18">Последние события</TextBlock>
-                <RichTextBlock Foreground="{ThemeResource SystemAccentColor}" TextWrapping="Wrap">
+                <TextBlock FontWeight="ExtraLight" FontSize="26">Последние события</TextBlock>
+                <RichTextBlock FontSize="16" Foreground="{ThemeResource SystemAccentColor}" TextWrapping="Wrap">
                     <Paragraph>1.	Страница планирования и составления задач (Kanban, to-do list, canvas схема)
                         <LineBreak/>
                         2.	Рабочая страница, где происходит работа над задачей и оставление фидбека (помадоро timer,матрица Эйзенхаура)

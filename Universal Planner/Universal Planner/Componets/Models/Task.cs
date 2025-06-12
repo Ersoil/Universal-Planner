@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Universal_Planner.Componets.Models
 {
-    class UTask
+    public class UTask
     {
         public string Title { get; set; }         
         public string Description { get; set; }   
@@ -16,8 +16,8 @@ namespace Universal_Planner.Componets.Models
 
         public UTask()
         {
-            Title = "Undefined";
-            Description = "Undefined";
+            Title = "Task Title";
+            Description = "Task Description";
             IsCompleted = false;
             DueDate = DateTime.MinValue;
         }

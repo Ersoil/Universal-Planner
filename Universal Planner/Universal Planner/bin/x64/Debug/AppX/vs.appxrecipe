@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-06-11T15:47:16.349</Modified>
+      <Modified>2025-06-12T11:41:03.670</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Universal Planner.exe">
       <PackagePath>entrypoint\Universal Planner.exe</PackagePath>
-      <Modified>2025-06-11T15:47:15.801</Modified>
+      <Modified>2025-06-12T11:41:03.135</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -729,7 +729,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Universal Planner.xr.xml">
       <PackagePath>Universal Planner.xr.xml</PackagePath>
-      <Modified>2025-06-11T15:43:48.196</Modified>
+      <Modified>2025-06-12T11:32:30.716</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
@@ -737,11 +737,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Pages\planner.xbf">
       <PackagePath>Pages\planner.xbf</PackagePath>
-      <Modified>2025-06-11T15:43:48.239</Modified>
+      <Modified>2025-06-12T11:41:02.914</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Componets\Resources\main.xbf">
       <PackagePath>Componets\Resources\main.xbf</PackagePath>
-      <Modified>2025-06-11T15:47:15.576</Modified>
+      <Modified>2025-06-12T11:41:02.914</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
@@ -749,7 +749,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Pages\StartScreen.xbf">
       <PackagePath>Pages\StartScreen.xbf</PackagePath>
-      <Modified>2025-06-11T15:43:48.240</Modified>
+      <Modified>2025-06-12T11:00:37.740</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -757,11 +757,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-06-11T11:10:38.532</Modified>
+      <Modified>2025-06-12T10:49:18.903</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Core\Universal Planner.exe">
       <PackagePath>Universal Planner.exe</PackagePath>
-      <Modified>2025-06-11T15:47:16.337</Modified>
+      <Modified>2025-06-12T11:41:03.660</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
