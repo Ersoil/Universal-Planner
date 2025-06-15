@@ -46,9 +46,11 @@ Assets\Wide310x150Logo.scale-150.png
 Assets\Wide310x150Logo.scale-200.png
 Assets\Wide310x150Logo.scale-400.png
 App.xbf
+Componets\Pages\planner.xbf
+Componets\Pages\SettingsPage.xbf
+Componets\Pages\SettingsPageGeneral.xbf
+Componets\Pages\StartScreen.xbf
 Componets\Resources\main.xbf
 MainPage.xbf
-Pages\planner.xbf
-Pages\StartScreen.xbf
 Universal Planner.xr.xml
 Properties\Default.rd.xml

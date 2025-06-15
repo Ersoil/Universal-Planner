@@ -17,7 +17,7 @@
     <SplitView x:Name="NavigationMenu">
         <SplitView.Pane>
             <RelativePanel>
-                <StackPanel RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True">
+                <StackPanel x:Name="Sdsdsd" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True">
                     <TextBlock Margin="10 20 10 40" FontWeight="ExtraLight" FontSize="34" FontFamily="Segoe UI">Меню</TextBlock>
                     <ListBox x:Name="PageIndex" Tapped="PageIndex_Tapped" >
                         <ListBoxItem Background="{Binding ElementName=NavigationMenu, Path=PaneBackground, Mode=OneWay}">
@@ -50,7 +50,7 @@
                 <Rectangle Margin="10,0,10, 0" Height="1" Fill="{ThemeResource AppBarSeparatorForegroundThemeBrush}" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.Above="ImportantMenu"></Rectangle>
                 <StackPanel x:Name="ImportantMenu" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True" >
                         
-                    <Button VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Height="50" Background="Transparent" HorizontalAlignment="Stretch">
+                    <Button VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Height="50" Background="Transparent" HorizontalAlignment="Stretch" Click="Settings_Click">
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
                                 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE713;" Margin="0 0 10 0"/>
                                 <TextBlock Text="Settings" VerticalAlignment="Center" TextAlignment="Center" HorizontalAlignment="Stretch"/>

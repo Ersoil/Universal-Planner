@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.ApplicationModel.Core;
 using Universal_Planner.Pages;
+using Universal_Planner.Componets.viewModels;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -37,7 +38,6 @@ namespace Universal_Planner
         {
             NavigationMenu.IsPaneOpen = !NavigationMenu.IsPaneOpen;
         }
-
         private void PageIndex_Tapped(object sender, TappedRoutedEventArgs e)
         {
             switch (PageIndex.SelectedIndex)
@@ -52,6 +52,13 @@ namespace Universal_Planner
                     MainFrame.Navigate(typeof(StartScreen));
                     break;
             }
+            NavigationMenu.IsPaneOpen = false;
+        }
+
+        private void Settings_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(typeof(SettingsPage));
+            NavigationMenu.IsPaneOpen = false;
         }
     }
 }

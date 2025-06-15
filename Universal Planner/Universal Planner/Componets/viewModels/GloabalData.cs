@@ -9,9 +9,28 @@ namespace Universal_Planner.Componets.viewModels
 {
     public static class GloabalData
     {
-        private static List<UTask> TaskList;
+        public static List<UTask> TaskList = new List<UTask>() {
+                new UTask(),
+                new UTask(),
+                new UTask(),
+                new UTask(),
+                new UTask(),
+                new UTask(),
+                new UTask(),
+                new UTask(),
+                new UTask(),
+                new UTask(),
+                new UTask(),
+                new UTask(),
+                new UTask(),
+                new UTask(),
+                new UTask(),
+                new UTask()
+        };
         private static List<UTag> TagList;
         private static List<Uuser> UserList;
         private static List<UTaskTag> TaskTags;
+
+
     }
 }
