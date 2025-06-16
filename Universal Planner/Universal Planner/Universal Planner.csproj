@@ -129,6 +129,9 @@
     <Compile Include="Componets\Pages\SettingsPageGeneral.xaml.cs">
       <DependentUpon>SettingsPageGeneral.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Componets\Pages\Statistics.xaml.cs">
+      <DependentUpon>Statistics.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Componets\viewModels\GloabalData.cs" />
     <Compile Include="Componets\viewModels\TaskViewModel.cs" />
     <Compile Include="Componets\Pages\planner.xaml.cs">
@@ -213,6 +216,10 @@
     <Page Include="Componets\Pages\SettingsPageGeneral.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Componets\Pages\Statistics.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Componets\Resources\main.xaml">
       <SubType>Designer</SubType>
