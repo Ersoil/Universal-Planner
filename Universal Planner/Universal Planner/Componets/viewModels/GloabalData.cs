@@ -4,33 +4,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Universal_Planner.Componets.Models;
+using System.ComponentModel;
+using System.Collections.ObjectModel;
 
 namespace Universal_Planner.Componets.viewModels
 {
-    public static class GloabalData
+    public class GloabalData
     {
-        public static List<UTask> TaskList = new List<UTask>() {
-                new UTask(),
-                new UTask(),
-                new UTask(),
-                new UTask(),
-                new UTask(),
-                new UTask(),
-                new UTask(),
-                new UTask(),
-                new UTask(),
-                new UTask(),
-                new UTask(),
-                new UTask(),
-                new UTask(),
-                new UTask(),
-                new UTask(),
-                new UTask()
-        };
-        private static List<UTag> TagList;
-        private static List<Uuser> UserList;
-        private static List<UTaskTag> TaskTags;
+        public ObservableCollection<TaskViewModel> TaskViewList { get; set; }
+        public ObservableCollection<UTag> TagViewLList { get; set; }
+        public ObservableCollection<Uuser> UserViewLList { get; set; }
+        private static GloabalData _Instance;
 
+        private GloabalData()
+        {
+            TaskViewList = new ObservableCollection<TaskViewModel>();
+            TagViewLList = new ObservableCollection<UTag>();
+            UserViewLList = new ObservableCollection<Uuser>();
+        }
 
+        public static GloabalData Instance
+        {
+            get {
+                if (_Instance == null)
+                {
+                    _Instance = new GloabalData();
+                }
+                return _Instance;
+            }
+        }
     }
 }

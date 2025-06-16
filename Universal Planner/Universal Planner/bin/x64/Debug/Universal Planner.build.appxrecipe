@@ -571,6 +571,9 @@
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Componets\Pages\SettingsPageGeneral.xbf">
       <PackagePath>Componets\Pages\SettingsPageGeneral.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Componets\Pages\Statistics.xbf">
+      <PackagePath>Componets\Pages\Statistics.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Componets\Resources\main.xbf">
       <PackagePath>Componets\Resources\main.xbf</PackagePath>
     </AppxPackagedFile>

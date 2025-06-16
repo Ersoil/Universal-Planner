@@ -9,19 +9,13 @@ using System.ComponentModel;
 
 namespace Universal_Planner.Componets.viewModels
 {
-    class TaskViewModel: INotifyPropertyChanged
+    public class TaskViewModel: INotifyPropertyChanged
     {
-        public UTask ModelTask;
-        public ObservableCollection<TaskViewModel> TaskViewList { get; set; }
+        private UTask ModelTask;
 
         public TaskViewModel(UTask task)
         {
            ModelTask = task;
-        }
-
-        public TaskViewModel(List<UTask> tasks)
-        {
-            TaskViewList = new ObservableCollection<TaskViewModel>(tasks.Select(b => new TaskViewModel(b)));
         }
 
         public string Title

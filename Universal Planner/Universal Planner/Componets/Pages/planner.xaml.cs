@@ -14,39 +14,37 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Universal_Planner.Componets.viewModels;
 using Universal_Planner.Componets.Models;
+using Windows.UI.Popups;
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace Universal_Planner.Pages
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
+
     public sealed partial class planner : Page
     {
+        public TaskViewModel SelectedTask;
         public planner()
         {
             this.InitializeComponent();
-            TaskViewModel TasksView = new TaskViewModel(new List<UTask>
+            this.DataContext = GloabalData.Instance;
+            TaskViewEdit.DataContext = SelectedTask;
+        }
+
+        private void CreateTask_Click(object sender, RoutedEventArgs e)
+        {
+            GloabalData.Instance.TaskViewList.Add(new TaskViewModel(new UTask()));
+        }
+
+        private void TaskListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (e.AddedItems.Count > 0)
             {
-                new UTask(),
-                new UTask(),
-                new UTask(),
-                new UTask(),
-                new UTask(),
-                new UTask(),
-                new UTask(),
-                new UTask(),
-                new UTask(),
-                new UTask(),
-                new UTask(),
-                new UTask(),
-                new UTask(),
-                new UTask(),
-                new UTask(),
-                new UTask()
+                var selectedTask = e.AddedItems[0] as TaskViewModel; // Замените TaskModel на ваш класс
+                if (selectedTask != null)
+                {
+                    SelectedTask = selectedTask;
+                }
             }
-            );
-            DataContext = TasksView;
         }
     }
 }

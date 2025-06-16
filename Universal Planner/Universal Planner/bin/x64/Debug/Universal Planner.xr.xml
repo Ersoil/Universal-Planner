@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
   <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="SelectedTask" />
+    <RootPropertyPathName Name="Title" />
     <RootPropertyPathName Name="TaskViewList" />
     <RootPropertyPathName Name="DueDate" />
     <RootPropertyPathName Name="Description" />
-    <RootPropertyPathName Name="Title" />
     <RootPropertyPathName Name="PaneBackground" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
@@ -42,6 +43,7 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Background" />
       <RootProperty Name="MinHeight" />
+      <RootProperty Name="DataContext" />
       <RootProperty Name="Orientation" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Padding" />
@@ -120,6 +122,12 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Data.Binding">
+      <RootProperty Name="Mode" />
+      <RootProperty Name="UpdateSourceTrigger" />
+      <RootProperty Name="ElementName" />
+      <RootProperty Name="Path" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="Text" />
       <RootProperty Name="Margin" />
@@ -152,11 +160,6 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Items" />
       <RootEvent Name="SelectionChanged" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Data.Binding">
-      <RootProperty Name="ElementName" />
-      <RootProperty Name="Path" />
-      <RootProperty Name="Mode" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
@@ -217,6 +220,7 @@
       <RootEvent Name="Toggled" />
     </RootType>
     <RootType FullName="Universal_Planner.Pages.SettingsPageGeneral" />
+    <RootType FullName="Universal_Planner.Componets.Pages.Statistics" />
     <RootType FullName="Windows.UI.Xaml.ResourceDictionary">
       <RootProperty Name="MergedDictionaries" />
       <RootProperty Name="Source" />

@@ -28,7 +28,7 @@
                     <RowDefinition Height="2*"/>
                 </Grid.RowDefinitions>
                 <StackPanel Grid.Row="0">
-                    <TextBlock Text="Задачи" Margin="0 0 0 10" x:Name="ListHeader" FontWeight="ExtraLight" FontSize="26"/>
+                    <TextBlock x:ConnectionId='4' Text="Задачи" Margin="0 0 0 10" x:Name="ListHeader" FontWeight="ExtraLight" FontSize="26"/>
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="6*"/>
@@ -53,7 +53,7 @@
                                     </Flyout>
                                 </Button.Flyout>
                             </Button>
-                            <Button Foreground="White" FontSize="12" Background="{ThemeResource SystemAccentColor}" Margin="0,15,0,15" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="CreateTask_Click">
+                            <Button x:ConnectionId='5' Foreground="White" FontSize="12" Background="{ThemeResource SystemAccentColor}" Margin="0,15,0,15" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                         >
                                 <FontIcon Glyph="&#xE109;"></FontIcon>
                             </Button>
                         </StackPanel>
@@ -61,7 +61,7 @@
                     <Border BorderThickness="1" BorderBrush="{ThemeResource SystemAccentColor}"/>
                 </StackPanel>
                 <ScrollViewer Grid.Row="1">
-                    <ListView ItemsSource="{Binding TaskViewList}" MinWidth="250" SelectionChanged="TaskListView_SelectionChanged">
+                    <ListView x:ConnectionId='3' ItemsSource="{Binding TaskViewList}" MinWidth="250"                                                 >
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <RelativePanel HorizontalAlignment="Stretch" Background="{ThemeResource SystemControlBackgroundChromeMediumLowBrush}" Margin="5">
@@ -101,8 +101,8 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <StackPanel VerticalAlignment="Stretch">
-                    <StackPanel x:Name="TaskViewEdit" DataContext="{Binding SelectedTask, Mode=TwoWay}" Orientation="Horizontal">
-                        <TextBox Text="{Binding SelectedTask.Title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="0 0 0 10" BorderThickness="0" x:Name="taskTitle" FontWeight="ExtraLight" FontSize="26"/>
+                    <StackPanel x:ConnectionId='1' x:Name="TaskViewEdit" DataContext="{Binding SelectedTask, Mode=TwoWay}" Orientation="Horizontal">
+                        <TextBox x:ConnectionId='2' Text="{Binding SelectedTask.Title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="0 0 0 10" BorderThickness="0" x:Name="taskTitle" FontWeight="ExtraLight" FontSize="26"/>
 
                         <Button VerticalAlignment="Stretch" Foreground="{ThemeResource SystemAccentColor}" Background="Transparent" BorderThickness="0">
                             <FontIcon Glyph="&#xE18B;"></FontIcon>
@@ -204,3 +204,4 @@
         </Grid>
     </Grid>
 </Page>
+
