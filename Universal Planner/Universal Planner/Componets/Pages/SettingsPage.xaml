@@ -27,6 +27,7 @@
                 <ListViewItem Content="Общие"          Tag="General" Margin="0,0,0,10"/>
                 <ListViewItem Content="Уведомления"    Tag="Notifications" Margin="0,0,0,10"/>
                 <ListViewItem Content="Синхронизация"  Tag="Synchronization" Margin="0,0,0,10"/>
+                <ListViewItem Content="Pomodoro таймер"  Tag="Pomodoro" Margin="0,0,0,10"/>
                 <ListViewItem Content="О приложении"   Tag="About"/>
             </ListView>
         </StackPanel>

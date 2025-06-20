@@ -132,25 +132,31 @@ namespace Universal_Planner.Universal_Planner_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[8];
+            _typeNameTable = new string[11];
             _typeNameTable[0] = "Universal_Planner.Pages.planner";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "Universal_Planner.Pages.SettingsPage";
-            _typeNameTable[4] = "Universal_Planner.Pages.SettingsPageGeneral";
-            _typeNameTable[5] = "Universal_Planner.Componets.Pages.Statistics";
-            _typeNameTable[6] = "Universal_Planner.MainPage";
-            _typeNameTable[7] = "Universal_Planner.Pages.StartScreen";
+            _typeNameTable[3] = "Universal_Planner.Pages.PomodoroPage";
+            _typeNameTable[4] = "String";
+            _typeNameTable[5] = "Universal_Planner.Pages.SettingsPage";
+            _typeNameTable[6] = "Universal_Planner.Pages.SettingsPageGeneral";
+            _typeNameTable[7] = "Universal_Planner.Componets.Pages.SettingsPagePomodoro";
+            _typeNameTable[8] = "Universal_Planner.Componets.Pages.Statistics";
+            _typeNameTable[9] = "Universal_Planner.MainPage";
+            _typeNameTable[10] = "Universal_Planner.Pages.StartScreen";
 
-            _typeTable = new global::System.Type[8];
+            _typeTable = new global::System.Type[11];
             _typeTable[0] = typeof(global::Universal_Planner.Pages.planner);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::Universal_Planner.Pages.SettingsPage);
-            _typeTable[4] = typeof(global::Universal_Planner.Pages.SettingsPageGeneral);
-            _typeTable[5] = typeof(global::Universal_Planner.Componets.Pages.Statistics);
-            _typeTable[6] = typeof(global::Universal_Planner.MainPage);
-            _typeTable[7] = typeof(global::Universal_Planner.Pages.StartScreen);
+            _typeTable[3] = typeof(global::Universal_Planner.Pages.PomodoroPage);
+            _typeTable[4] = typeof(global::System.String);
+            _typeTable[5] = typeof(global::Universal_Planner.Pages.SettingsPage);
+            _typeTable[6] = typeof(global::Universal_Planner.Pages.SettingsPageGeneral);
+            _typeTable[7] = typeof(global::Universal_Planner.Componets.Pages.SettingsPagePomodoro);
+            _typeTable[8] = typeof(global::Universal_Planner.Componets.Pages.Statistics);
+            _typeTable[9] = typeof(global::Universal_Planner.MainPage);
+            _typeTable[10] = typeof(global::Universal_Planner.Pages.StartScreen);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -186,11 +192,13 @@ namespace Universal_Planner.Universal_Planner_XamlTypeInfo
         }
 
         private object Activate_0_planner() { return new global::Universal_Planner.Pages.planner(); }
-        private object Activate_3_SettingsPage() { return new global::Universal_Planner.Pages.SettingsPage(); }
-        private object Activate_4_SettingsPageGeneral() { return new global::Universal_Planner.Pages.SettingsPageGeneral(); }
-        private object Activate_5_Statistics() { return new global::Universal_Planner.Componets.Pages.Statistics(); }
-        private object Activate_6_MainPage() { return new global::Universal_Planner.MainPage(); }
-        private object Activate_7_StartScreen() { return new global::Universal_Planner.Pages.StartScreen(); }
+        private object Activate_3_PomodoroPage() { return new global::Universal_Planner.Pages.PomodoroPage(); }
+        private object Activate_5_SettingsPage() { return new global::Universal_Planner.Pages.SettingsPage(); }
+        private object Activate_6_SettingsPageGeneral() { return new global::Universal_Planner.Pages.SettingsPageGeneral(); }
+        private object Activate_7_SettingsPagePomodoro() { return new global::Universal_Planner.Componets.Pages.SettingsPagePomodoro(); }
+        private object Activate_8_Statistics() { return new global::Universal_Planner.Componets.Pages.Statistics(); }
+        private object Activate_9_MainPage() { return new global::Universal_Planner.MainPage(); }
+        private object Activate_10_StartScreen() { return new global::Universal_Planner.Pages.StartScreen(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -217,37 +225,58 @@ namespace Universal_Planner.Universal_Planner_XamlTypeInfo
                 xamlType = new global::Universal_Planner.Universal_Planner_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  Universal_Planner.Pages.SettingsPage
+            case 3:   //  Universal_Planner.Pages.PomodoroPage
                 userType = new global::Universal_Planner.Universal_Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_SettingsPage;
+                userType.Activator = Activate_3_PomodoroPage;
+                userType.AddMemberName("TimeDisplay");
+                userType.AddMemberName("CurrentPhaseLabel");
+                userType.AddMemberName("PhaseCounterDisplay");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 4:   //  Universal_Planner.Pages.SettingsPageGeneral
+            case 4:   //  String
+                xamlType = new global::Universal_Planner.Universal_Planner_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 5:   //  Universal_Planner.Pages.SettingsPage
+                userType = new global::Universal_Planner.Universal_Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_5_SettingsPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 6:   //  Universal_Planner.Pages.SettingsPageGeneral
                 userType = new global::Universal_Planner.Universal_Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_4_SettingsPageGeneral;
+                userType.Activator = Activate_6_SettingsPageGeneral;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 5:   //  Universal_Planner.Componets.Pages.Statistics
-                userType = new global::Universal_Planner.Universal_Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_5_Statistics;
+            case 7:   //  Universal_Planner.Componets.Pages.SettingsPagePomodoro
+                userType = new global::Universal_Planner.Universal_Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_7_SettingsPagePomodoro;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 6:   //  Universal_Planner.MainPage
+            case 8:   //  Universal_Planner.Componets.Pages.Statistics
                 userType = new global::Universal_Planner.Universal_Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_6_MainPage;
+                userType.Activator = Activate_8_Statistics;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 7:   //  Universal_Planner.Pages.StartScreen
+            case 9:   //  Universal_Planner.MainPage
                 userType = new global::Universal_Planner.Universal_Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_7_StartScreen;
+                userType.Activator = Activate_9_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 10:   //  Universal_Planner.Pages.StartScreen
+                userType = new global::Universal_Planner.Universal_Planner_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_10_StartScreen;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -256,11 +285,48 @@ namespace Universal_Planner.Universal_Planner_XamlTypeInfo
         }
 
 
+        private object get_0_PomodoroPage_TimeDisplay(object instance)
+        {
+            var that = (global::Universal_Planner.Pages.PomodoroPage)instance;
+            return that.TimeDisplay;
+        }
+        private object get_1_PomodoroPage_CurrentPhaseLabel(object instance)
+        {
+            var that = (global::Universal_Planner.Pages.PomodoroPage)instance;
+            return that.CurrentPhaseLabel;
+        }
+        private object get_2_PomodoroPage_PhaseCounterDisplay(object instance)
+        {
+            var that = (global::Universal_Planner.Pages.PomodoroPage)instance;
+            return that.PhaseCounterDisplay;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
             global::Universal_Planner.Universal_Planner_XamlTypeInfo.XamlMember xamlMember = null;
-            // No Local Properties
+            global::Universal_Planner.Universal_Planner_XamlTypeInfo.XamlUserType userType;
+
+            switch (longMemberName)
+            {
+            case "Universal_Planner.Pages.PomodoroPage.TimeDisplay":
+                userType = (global::Universal_Planner.Universal_Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Universal_Planner.Pages.PomodoroPage");
+                xamlMember = new global::Universal_Planner.Universal_Planner_XamlTypeInfo.XamlMember(this, "TimeDisplay", "String");
+                xamlMember.Getter = get_0_PomodoroPage_TimeDisplay;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Universal_Planner.Pages.PomodoroPage.CurrentPhaseLabel":
+                userType = (global::Universal_Planner.Universal_Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Universal_Planner.Pages.PomodoroPage");
+                xamlMember = new global::Universal_Planner.Universal_Planner_XamlTypeInfo.XamlMember(this, "CurrentPhaseLabel", "String");
+                xamlMember.Getter = get_1_PomodoroPage_CurrentPhaseLabel;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Universal_Planner.Pages.PomodoroPage.PhaseCounterDisplay":
+                userType = (global::Universal_Planner.Universal_Planner_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Universal_Planner.Pages.PomodoroPage");
+                xamlMember = new global::Universal_Planner.Universal_Planner_XamlTypeInfo.XamlMember(this, "PhaseCounterDisplay", "String");
+                xamlMember.Getter = get_2_PomodoroPage_PhaseCounterDisplay;
+                xamlMember.SetIsReadOnly();
+                break;
+            }
             return xamlMember;
         }
     }

@@ -244,3 +244,13 @@ C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\ob
 C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\obj\x64\Debug\Componets\Pages\Statistics.xaml
 C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\obj\x64\Debug\Componets\Pages\Statistics.xbf
 C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Componets\Pages\Statistics.xbf
+C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Componets\Pages\PomodoroPage.xbf
+C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Componets\Pages\SettingsPagePomodoro.xbf
+C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\obj\x64\Debug\Componets\Pages\PomodoroPage.g.i.cs
+C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\obj\x64\Debug\Componets\Pages\PomodoroPage.g.cs
+C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\obj\x64\Debug\Componets\Pages\SettingsPagePomodoro.g.i.cs
+C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\obj\x64\Debug\Componets\Pages\SettingsPagePomodoro.g.cs
+C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\obj\x64\Debug\Componets\Pages\PomodoroPage.xaml
+C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\obj\x64\Debug\Componets\Pages\SettingsPagePomodoro.xaml
+C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\obj\x64\Debug\Componets\Pages\PomodoroPage.xbf
+C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\obj\x64\Debug\Componets\Pages\SettingsPagePomodoro.xbf

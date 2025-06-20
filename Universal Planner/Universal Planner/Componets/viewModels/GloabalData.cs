@@ -9,6 +9,7 @@ using System.Collections.ObjectModel;
 
 namespace Universal_Planner.Componets.viewModels
 {
+
     public class GloabalData
     {
         public ObservableCollection<TaskViewModel> TaskViewList { get; set; }

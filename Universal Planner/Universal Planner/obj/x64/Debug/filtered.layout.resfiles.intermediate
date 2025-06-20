@@ -47,11 +47,15 @@ Assets\Wide310x150Logo.scale-200.png
 Assets\Wide310x150Logo.scale-400.png
 App.xbf
 Componets\Pages\planner.xbf
+Componets\Pages\PomodoroPage.xbf
 Componets\Pages\SettingsPage.xbf
 Componets\Pages\SettingsPageGeneral.xbf
+Componets\Pages\SettingsPagePomodoro.xbf
 Componets\Pages\StartScreen.xbf
 Componets\Pages\Statistics.xbf
 Componets\Resources\main.xbf
 MainPage.xbf
 Universal Planner.xr.xml
+Componets\Resources\Sounds\pink-noise-235.mp3
+Componets\Resources\Sounds\underwater-white-noise-46423.mp3
 Properties\Default.rd.xml

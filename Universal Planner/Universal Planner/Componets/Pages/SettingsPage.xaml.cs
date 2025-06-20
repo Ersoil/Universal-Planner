@@ -25,6 +25,7 @@ namespace Universal_Planner.Pages
             General,
             Notifications,
             Synchronization,
+            Pomodoro,
             About
         }
 
@@ -96,6 +97,9 @@ namespace Universal_Planner.Pages
                     break;
                 case Section.About:
                     controlToShow = CreatePlaceholder("О приложении");
+                    break;
+                case Section.Pomodoro:
+                    controlToShow = new Componets.Pages.SettingsPagePomodoro();
                     break;
                 default:
                     controlToShow = CreatePlaceholder("Неизвестная секция");

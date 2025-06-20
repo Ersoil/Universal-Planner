@@ -12,6 +12,9 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI.Popups;
+using Universal_Planner.Componets.viewModels;
+using Universal_Planner.Componets.Models;
 
 namespace Universal_Planner.Pages
 {
@@ -24,27 +27,7 @@ namespace Universal_Planner.Pages
 
         private void OnExampleToggleToggled(object sender, RoutedEventArgs e)
         {
-            bool isOn = ExampleToggle.IsOn;
-            // TODO: сохранение состояния переключателя
-        }
-
-        // Другой переключатель
-        private void ExampleToggle_Toggled(object sender, RoutedEventArgs e)
-        {
-            // Обработка события переключения
-            var toggleSwitch = sender as ToggleSwitch;
-            if (toggleSwitch != null)
-            {
-                // Логика для обработки изменения состояния переключателя
-                if (toggleSwitch.IsOn)
-                {
-                    // Действие при включении
-                }
-                else
-                {
-                    // Действие при выключении
-                }
-            }
+            new MessageDialog(Convert.ToString(GloabalData.Instance.TaskViewList.Count)).ShowAsync();
         }
     }
 }

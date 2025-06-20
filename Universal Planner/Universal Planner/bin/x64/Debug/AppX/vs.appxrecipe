@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-06-16T16:52:23.633</Modified>
+      <Modified>2025-06-20T09:20:20.554</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Universal Planner.exe">
       <PackagePath>entrypoint\Universal Planner.exe</PackagePath>
-      <Modified>2025-06-16T16:52:23.080</Modified>
+      <Modified>2025-06-20T09:20:19.924</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -727,9 +727,17 @@
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2025-05-08T08:47:04.571</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Componets\Resources\Sounds\pink-noise-235.mp3">
+      <PackagePath>Componets\Resources\Sounds\pink-noise-235.mp3</PackagePath>
+      <Modified>2025-06-20T09:03:49.874</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Componets\Resources\Sounds\underwater-white-noise-46423.mp3">
+      <PackagePath>Componets\Resources\Sounds\underwater-white-noise-46423.mp3</PackagePath>
+      <Modified>2025-06-20T09:03:49.878</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Universal Planner.xr.xml">
       <PackagePath>Universal Planner.xr.xml</PackagePath>
-      <Modified>2025-06-16T16:52:22.847</Modified>
+      <Modified>2025-06-20T09:07:26.590</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
@@ -737,23 +745,31 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Componets\Pages\planner.xbf">
       <PackagePath>Componets\Pages\planner.xbf</PackagePath>
-      <Modified>2025-06-16T16:52:22.864</Modified>
+      <Modified>2025-06-17T14:03:23.845</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Componets\Pages\PomodoroPage.xbf">
+      <PackagePath>Componets\Pages\PomodoroPage.xbf</PackagePath>
+      <Modified>2025-06-20T09:07:26.649</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Componets\Pages\SettingsPage.xbf">
       <PackagePath>Componets\Pages\SettingsPage.xbf</PackagePath>
-      <Modified>2025-06-15T07:48:29.625</Modified>
+      <Modified>2025-06-20T09:18:08.236</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Componets\Pages\SettingsPageGeneral.xbf">
       <PackagePath>Componets\Pages\SettingsPageGeneral.xbf</PackagePath>
       <Modified>2025-06-15T07:48:29.625</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Componets\Pages\SettingsPagePomodoro.xbf">
+      <PackagePath>Componets\Pages\SettingsPagePomodoro.xbf</PackagePath>
+      <Modified>2025-06-20T09:07:26.649</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Componets\Pages\Statistics.xbf">
       <PackagePath>Componets\Pages\Statistics.xbf</PackagePath>
-      <Modified>2025-06-16T15:59:04.899</Modified>
+      <Modified>2025-06-20T09:18:08.236</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Componets\Resources\main.xbf">
       <PackagePath>Componets\Resources\main.xbf</PackagePath>
-      <Modified>2025-06-16T16:52:22.864</Modified>
+      <Modified>2025-06-20T09:20:19.699</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
@@ -761,7 +777,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Componets\Pages\StartScreen.xbf">
       <PackagePath>Componets\Pages\StartScreen.xbf</PackagePath>
-      <Modified>2025-06-15T07:48:29.626</Modified>
+      <Modified>2025-06-20T09:18:08.237</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -769,11 +785,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-06-16T15:59:08.093</Modified>
+      <Modified>2025-06-20T09:18:09.119</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Core\Universal Planner.exe">
       <PackagePath>Universal Planner.exe</PackagePath>
-      <Modified>2025-06-16T16:52:23.624</Modified>
+      <Modified>2025-06-20T09:20:20.542</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

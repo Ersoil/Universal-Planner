@@ -21,5 +21,13 @@ namespace Universal_Planner.Componets.Models
             IsCompleted = false;
             DueDate = DateTime.MinValue;
         }
+
+        public UTask(string Title, string Description,bool isCompleted)
+        {
+            this.Title = Title;
+            this.Description = Description;
+            IsCompleted = isCompleted;
+            DueDate = DateTime.MinValue;
+        }
     }
 }

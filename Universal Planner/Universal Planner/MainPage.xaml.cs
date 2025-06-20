@@ -46,6 +46,9 @@ namespace Universal_Planner
                     MainFrame.Navigate(typeof(StartScreen));
                     break;
                 case 1:
+                    MainFrame.Navigate(typeof(PomodoroPage));
+                    break;
+                case 2:
                     MainFrame.Navigate(typeof(planner));
                     break;
                 default:

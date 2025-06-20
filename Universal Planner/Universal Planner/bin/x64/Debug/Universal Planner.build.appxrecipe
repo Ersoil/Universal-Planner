@@ -556,6 +556,12 @@
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Componets\Resources\Sounds\pink-noise-235.mp3">
+      <PackagePath>Componets\Resources\Sounds\pink-noise-235.mp3</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Componets\Resources\Sounds\underwater-white-noise-46423.mp3">
+      <PackagePath>Componets\Resources\Sounds\underwater-white-noise-46423.mp3</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Universal Planner.xr.xml">
       <PackagePath>Universal Planner.xr.xml</PackagePath>
     </AppxPackagedFile>
@@ -565,11 +571,17 @@
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Componets\Pages\planner.xbf">
       <PackagePath>Componets\Pages\planner.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Componets\Pages\PomodoroPage.xbf">
+      <PackagePath>Componets\Pages\PomodoroPage.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Componets\Pages\SettingsPage.xbf">
       <PackagePath>Componets\Pages\SettingsPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Componets\Pages\SettingsPageGeneral.xbf">
       <PackagePath>Componets\Pages\SettingsPageGeneral.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Componets\Pages\SettingsPagePomodoro.xbf">
+      <PackagePath>Componets\Pages\SettingsPagePomodoro.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Componets\Pages\Statistics.xbf">
       <PackagePath>Componets\Pages\Statistics.xbf</PackagePath>

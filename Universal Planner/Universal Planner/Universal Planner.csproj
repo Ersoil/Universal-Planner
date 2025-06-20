@@ -123,11 +123,17 @@
     <Compile Include="Componets\Models\Task.cs" />
     <Compile Include="Componets\Models\TaskTag.cs" />
     <Compile Include="Componets\Models\User.cs" />
+    <Compile Include="Componets\Pages\PomodoroPage.xaml.cs">
+      <DependentUpon>PomodoroPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Componets\Pages\SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Componets\Pages\SettingsPageGeneral.xaml.cs">
       <DependentUpon>SettingsPageGeneral.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Componets\Pages\SettingsPagePomodoro.xaml.cs">
+      <DependentUpon>SettingsPagePomodoro.xaml</DependentUpon>
     </Compile>
     <Compile Include="Componets\Pages\Statistics.xaml.cs">
       <DependentUpon>Statistics.xaml</DependentUpon>
@@ -199,6 +205,8 @@
     <Content Include="Assets\Square44x44Logo.scale-200.png" />
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="Componets\Resources\Sounds\pink-noise-235.mp3" />
+    <Content Include="Componets\Resources\Sounds\underwater-white-noise-46423.mp3" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -209,11 +217,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Componets\Pages\PomodoroPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Componets\Pages\SettingsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Componets\Pages\SettingsPageGeneral.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Componets\Pages\SettingsPagePomodoro.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
