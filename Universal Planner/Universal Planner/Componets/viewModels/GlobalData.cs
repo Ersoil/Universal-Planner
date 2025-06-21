@@ -10,26 +10,26 @@ using System.Collections.ObjectModel;
 namespace Universal_Planner.Componets.viewModels
 {
 
-    public class GloabalData
+    public class GlobalData
     {
         public ObservableCollection<TaskViewModel> TaskViewList { get; set; }
         public ObservableCollection<UTag> TagViewLList { get; set; }
         public ObservableCollection<Uuser> UserViewLList { get; set; }
-        private static GloabalData _Instance;
+        private static GlobalData _Instance;
 
-        private GloabalData()
+        private GlobalData()
         {
             TaskViewList = new ObservableCollection<TaskViewModel>();
             TagViewLList = new ObservableCollection<UTag>();
             UserViewLList = new ObservableCollection<Uuser>();
         }
 
-        public static GloabalData Instance
+        public static GlobalData Instance
         {
             get {
                 if (_Instance == null)
                 {
-                    _Instance = new GloabalData();
+                    _Instance = new GlobalData();
                 }
                 return _Instance;
             }

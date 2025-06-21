@@ -2,12 +2,10 @@
     x:Class="Universal_Planner.Pages.planner"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Universal_Planner.Componets.Resources"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
     <Grid Margin="80 20 20 20">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.4*"></ColumnDefinition>
@@ -140,6 +138,7 @@
                         <RichEditBox Background="Transparent" BorderThickness="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></RichEditBox>
                     </Grid>
                     <TextBlock  Text="Напоминания и дедлайны" Margin="15 0 0 10" FontWeight="ExtraLight" FontSize="18"/>
+                    <Viewbox>
                     <StackPanel Orientation="Horizontal">
                         <Button Margin="5" Background="{ThemeResource SystemControlBackgroundChromeMediumLowBrush}" BorderThickness="0">
                             <StackPanel Orientation="Horizontal">
@@ -182,6 +181,7 @@
                             </Button.Flyout>
                         </Button>
                     </StackPanel>
+                    </Viewbox>
                     <TextBlock  Text="Теги" Margin="15 10 0 10"  FontWeight="ExtraLight" FontSize="18"/>
                     <StackPanel Background="{ThemeResource SystemControlBackgroundChromeMediumLowBrush}" MinHeight="50">
                         <Button Foreground="White" Margin="5" Background="{ThemeResource SystemAccentColor}" BorderThickness="0">

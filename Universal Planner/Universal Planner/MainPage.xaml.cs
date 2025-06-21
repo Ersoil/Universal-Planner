@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Navigation;
 using Windows.ApplicationModel.Core;
 using Universal_Planner.Pages;
 using Universal_Planner.Componets.viewModels;
+using Universal_Planner.Componets.Pages;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -50,6 +51,9 @@ namespace Universal_Planner
                     break;
                 case 2:
                     MainFrame.Navigate(typeof(planner));
+                    break;
+                case 3:
+                    MainFrame.Navigate(typeof(Statistics));
                     break;
                 default:
                     MainFrame.Navigate(typeof(StartScreen));

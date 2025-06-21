@@ -7,9 +7,125 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <ScrollViewer>
+    <Grid Margin="80 20 20 20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Статистика" FontWeight="ExtraLight" FontSize="34" Foreground="{ThemeResource SystemAccentColor}"/>
 
-    <Grid>
+        <StackPanel Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1">
+            <TextBlock Text="Время работы  по дням" FontWeight="ExtraLight" FontSize="26"/>
+            <Grid Margin="15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Border BorderBrush="{ThemeResource SystemAccentColor}" Grid.ColumnSpan="7" Grid.Row="1" BorderThickness="1"/>
+                <Border BorderBrush="{ThemeResource SystemAccentColor}" Grid.ColumnSpan="6" Grid.Row="1" BorderThickness="1"/>
+                <Border BorderBrush="{ThemeResource SystemAccentColor}" Grid.ColumnSpan="5" Grid.Row="1" BorderThickness="1"/>
+                <Border BorderBrush="{ThemeResource SystemAccentColor}" Grid.ColumnSpan="4" Grid.Row="1" BorderThickness="1"/>
+                <Border BorderBrush="{ThemeResource SystemAccentColor}" Grid.ColumnSpan="3" Grid.Row="1" BorderThickness="1"/>
+                <Border BorderBrush="{ThemeResource SystemAccentColor}" Grid.ColumnSpan="2" Grid.Row="1" BorderThickness="1"/>
+                <Border BorderBrush="{ThemeResource SystemAccentColor}" Grid.ColumnSpan="1" Grid.Row="1" BorderThickness="1"/>
+                <Border BorderBrush="{ThemeResource SystemAccentColor}" Grid.ColumnSpan="7" Grid.Row="0" BorderThickness="1"/>
+                <TextBlock Text="Пн" FontSize="18" FontWeight="Light" HorizontalAlignment="Center" Margin="5" Grid.Row="1" Grid.Column="0"/>
+                <TextBlock Text="Вт" FontSize="18" FontWeight="Light" HorizontalAlignment="Center" Margin="5" Grid.Row="1" Grid.Column="1"/>
+                <TextBlock Text="Ср" FontSize="18" FontWeight="Light" HorizontalAlignment="Center" Margin="5" Grid.Row="1" Grid.Column="2"/>
+                <TextBlock Text="Чт" FontSize="18" FontWeight="Light" HorizontalAlignment="Center" Margin="5" Grid.Row="1" Grid.Column="3"/>
+                <TextBlock Text="Пт" FontSize="18" FontWeight="Light" HorizontalAlignment="Center" Margin="5" Grid.Row="1" Grid.Column="4"/>
+                <TextBlock Text="Сб" FontSize="18" FontWeight="Light" HorizontalAlignment="Center"  Margin="5" Grid.Row="1" Grid.Column="5"/>
+                <TextBlock Text="Вс" FontSize="18" FontWeight="Light" HorizontalAlignment="Center" Margin="5" Grid.Row="1" Grid.Column="6"/>
+                <Rectangle Height="180" Fill="{ThemeResource SystemAccentColor}"  Width="40" Margin="0,15,0,0" VerticalAlignment="Bottom"  Grid.Column="0"/>
+                <Rectangle Height="210" Fill="{ThemeResource SystemAccentColor}"  Width="40" Margin="0,15,0,0" VerticalAlignment="Bottom"   Grid.Column="1"/>
+                <Rectangle Height="180" Fill="{ThemeResource SystemAccentColor}"  Width="40" Margin="0,15,0,0" VerticalAlignment="Bottom"  Grid.Column="2"/>
+                <Rectangle Height="100" Fill="{ThemeResource SystemAccentColor}"  Width="40"  Margin="0,15,0,0" VerticalAlignment="Bottom" Grid.Column="3"/>
+                <Rectangle Height="320" Fill="{ThemeResource SystemAccentColor}"  Width="40"  Margin="0,15,0,0" VerticalAlignment="Bottom" Grid.Column="4"/>
+                <Rectangle Height="180" Fill="{ThemeResource SystemAccentColor}"  Width="40"  Margin="0,15,0,0" VerticalAlignment="Bottom" Grid.Column="5"/>
+                <Rectangle Height="180" Fill="{ThemeResource SystemAccentColor}"  Width="40"  Margin="0,15,0,0" VerticalAlignment="Bottom" Grid.Column="6"/>
+            </Grid>
+            <ScrollViewer HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Disabled" VerticalScrollMode="Disabled">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Margin="10" FontSize="18" FontWeight="Bold" Foreground="{ThemeResource SystemAccentColor}" Text="В среднем: 6hr 48min"/>
+                    <TextBlock Margin="10" FontSize="18" FontWeight="Bold" Foreground="{ThemeResource SystemAccentColor}" Text="Наиболее продуктивный день: Пн"/>
+                    <TextBlock Margin="10" FontSize="18" FontWeight="Bold" Foreground="{ThemeResource SystemAccentColor}" Text="Наибольшше время за  работой: 18hr 48min"/>
+                </StackPanel>
+            </ScrollViewer>
 
-    </Grid>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2">
+            <TextBlock Text="Последняя активность" FontWeight="ExtraLight" FontSize="26"/>
+            <VariableSizedWrapGrid MinHeight="300" Margin="15" Background="{ThemeResource SystemControlBackgroundChromeMediumBrush}" MaximumRowsOrColumns="4">
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <Grid Background="{ThemeResource SystemAccentColor}" MinWidth="120">
+                        <TextBlock Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" Text="18:40 26.07.2025:"/>
+                    </Grid>
+                    <TextBlock Margin="15,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Удалена задача 'TaskName'"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <Grid Background="{ThemeResource SystemAccentColor}" MinWidth="120">
+                        <TextBlock Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" Text="18:40 26.07.2025:"/>
+                    </Grid>
+                    <TextBlock Margin="15,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Удалена задача 'TaskName'"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <Grid Background="{ThemeResource SystemAccentColor}" MinWidth="120">
+                        <TextBlock Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" Text="18:40 26.07.2025:"/>
+                    </Grid>
+                    <TextBlock Margin="15,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Удалена задача 'TaskName'"/>
+                </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="5">
+                        <Grid Background="{ThemeResource SystemAccentColor}" MinWidth="120">
+                            <TextBlock Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" Text="18:40 26.07.2025:"/>
+                        </Grid>
+                        <TextBlock Margin="15,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Удалена задача 'TaskName'"/>
+                    </StackPanel>
+                </VariableSizedWrapGrid>
+        </StackPanel>
+            <Viewbox Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" VerticalAlignment="Top" MinHeight="800">
+            <StackPanel Margin="0,0,15,0">
+                <TextBlock Text="Сводка" FontWeight="ExtraLight" FontSize="26"/>
+                <TextBlock Margin="10" Text="Данные о задачах" Foreground="{ThemeResource SystemAccentColor}" FontWeight="ExtraLight" FontSize="18"/>
+                <Border BorderBrush="{ThemeResource SystemAccentColor}" BorderThickness="1"/>
+                <TextBlock Margin="15,5,0,0" Text="Всего задач создано: 127" FontWeight="Light" FontSize="14"/>
+                <TextBlock Margin="15,5,0,0" Text="Среднее время выполнения задачи: 2 дня" FontWeight="Light" FontSize="14"/>
+                <TextBlock Margin="15,5,0,0" Text="Данные о задачах" FontWeight="Light" FontSize="14"/>
+                <TextBlock Margin="15,5,0,0" Text="Данные о задачах" FontWeight="Light" FontSize="14"/>
+                <TextBlock Margin="10" Text="Временная статистика" Foreground="{ThemeResource SystemAccentColor}" FontWeight="ExtraLight" FontSize="18"/>
+                <Border BorderBrush="{ThemeResource SystemAccentColor}" BorderThickness="1"/>
+                <TextBlock Margin="15,5,0,0" Text="Чаще всего вы завершаете задачи в 14:00–16:00" FontWeight="Light" FontSize="14"/>
+                <TextBlock Margin="15,5,0,0" Text="Самая продуктивная неделя: 15–21 мая (выполнено 20 задач)" FontWeight="Light" FontSize="14"/>
+                <TextBlock Margin="15,5,0,0" Text="5 задач просрочено в среднем на 3 дня" FontWeight="Light" FontSize="14"/>
+                <TextBlock Margin="15,5,0,0" Text="В среднем вы тратите 1 час 20 минут на задачу" FontWeight="Light" FontSize="14"/>
+                <TextBlock Margin="10" Text="Поведенческая аналитика" Foreground="{ThemeResource SystemAccentColor}" FontWeight="ExtraLight" FontSize="18"/>
+                <Border BorderBrush="{ThemeResource SystemAccentColor}" BorderThickness="1"/>
+                <TextBlock Margin="15,5,0,0" Text="Вы открываете приложение 3 раза в день" FontWeight="Light" FontSize="14"/>
+                <TextBlock Margin="15,5,0,0" Text="70% задач вы создаёте через быстрое добавление" FontWeight="Light" FontSize="14"/>
+                <TextBlock Margin="15,5,0,0" Text="Вы переносите дедлайны у 30% задач" FontWeight="Light" FontSize="14"/>
+                <TextBlock Margin="10" Text="Долгосрочные тренды" Foreground="{ThemeResource SystemAccentColor}" FontWeight="ExtraLight" FontSize="18"/>
+                <Border BorderBrush="{ThemeResource SystemAccentColor}" BorderThickness="1"/>
+                <TextBlock Margin="15,5,0,0" Text="Ваша продуктивность выросла на 25% за последний месяц" FontWeight="Light" FontSize="14"/>
+                <TextBlock Margin="15,5,0,0" Text="В январе вы ставили больше рабочих задач, чем в декабре" FontWeight="Light" FontSize="14"/>
+                <TextBlock Margin="15,5,0,0" Text="Средний приоритет задач стал выше" FontWeight="Light" FontSize="14"/>
+            </StackPanel>
+            </Viewbox>    
+        </Grid>
+    </ScrollViewer>
 </Page>
 

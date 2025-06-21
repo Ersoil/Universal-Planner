@@ -12,51 +12,87 @@
         <Button RelativePanel.AlignRightWithPanel="True" Width="50" Height="50" VerticalAlignment="Center" Background="Transparent">
             <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE713;"></FontIcon>
         </Button>
-        <VariableSizedWrapGrid x:ConnectionId='2' x:Name="ContentGrid" Orientation="Horizontal" MaximumRowsOrColumns="12" ItemHeight="90" ItemWidth="90" 
+        <VariableSizedWrapGrid x:ConnectionId='2' x:Name="ContentGrid" Orientation="Horizontal" MaximumRowsOrColumns="12" ItemHeight="200" ItemWidth="200" 
                                RelativePanel.AlignBottomWithPanel="True" 
                                RelativePanel.AlignRightWithPanel="True" 
                                RelativePanel.AlignLeftWithPanel="True" 
                                RelativePanel.Below="Header">
-            <Button Foreground="White" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" VariableSizedWrapGrid.ColumnSpan="2" Margin="2" VariableSizedWrapGrid.RowSpan="2" 
+            <StackPanel VariableSizedWrapGrid.ColumnSpan="3" VariableSizedWrapGrid.RowSpan="3">
+                <TextBlock Text="Частые действия" FontWeight="ExtraLight" FontSize="26"/>
+                <VariableSizedWrapGrid MaximumRowsOrColumns="2" ItemHeight="90" ItemWidth="190">
+                    <Button Foreground="White" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" VariableSizedWrapGrid.ColumnSpan="1" Margin="2" VariableSizedWrapGrid.RowSpan="2" 
                     VerticalAlignment="Stretch" 
                     HorizontalAlignment="Stretch" 
                     Background="{ThemeResource SystemAccentColor}">
-                <RelativePanel>
-                    <FontIcon FontSize="34" FontFamily="Segoe MDL2 Assets" Glyph="&#xE713;" RelativePanel.AlignLeftWithPanel="True"
+                        <RelativePanel>
+                            <FontIcon FontSize="34" FontFamily="Segoe MDL2 Assets" Glyph="&#xE104;" RelativePanel.AlignLeftWithPanel="True"
                               RelativePanel.AlignRightWithPanel="True"
                               RelativePanel.AlignBottomWithPanel="True"
                               RelativePanel.AlignTopWithPanel="True">
-                        
-                    </FontIcon>
-                    <TextBlock FontSize="16" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignBottomWithPanel="True">Параметры</TextBlock>
-                </RelativePanel>
-            </Button>
-            <Button VariableSizedWrapGrid.ColumnSpan="2" Margin="2" VariableSizedWrapGrid.RowSpan="1" 
+
+                            </FontIcon>
+                            <TextBlock FontSize="16" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignBottomWithPanel="True">Создать задачу</TextBlock>
+                        </RelativePanel>
+                    </Button>
+                    <Button Foreground="White" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" VariableSizedWrapGrid.ColumnSpan="2" Margin="2" VariableSizedWrapGrid.RowSpan="1" 
                     VerticalAlignment="Stretch" 
                     HorizontalAlignment="Stretch" 
                     Background="{ThemeResource SystemAccentColor}">
-                
-            </Button>
-            <Button VariableSizedWrapGrid.ColumnSpan="2" Margin="2" VariableSizedWrapGrid.RowSpan="1" 
+                        <RelativePanel>
+                            <FontIcon FontSize="34" FontFamily="Segoe MDL2 Assets" Glyph="&#xE713;" RelativePanel.AlignLeftWithPanel="True"
+                              RelativePanel.AlignRightWithPanel="True"
+                              RelativePanel.AlignBottomWithPanel="True"
+                              RelativePanel.AlignTopWithPanel="True">
+
+                            </FontIcon>
+                            <TextBlock FontSize="16" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignBottomWithPanel="True">Параметры</TextBlock>
+                        </RelativePanel>
+                    </Button>
+                    <Button Foreground="White" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" VariableSizedWrapGrid.ColumnSpan="2" Margin="2" VariableSizedWrapGrid.RowSpan="1" 
                     VerticalAlignment="Stretch" 
                     HorizontalAlignment="Stretch" 
                     Background="{ThemeResource SystemAccentColor}">
-                
-            </Button>
-            <StackPanel Margin="20 2" VariableSizedWrapGrid.ColumnSpan="6" VariableSizedWrapGrid.RowSpan="6">
-                <TextBlock FontWeight="ExtraLight" FontSize="26">Последние события</TextBlock>
-                <RichTextBlock FontSize="16" Foreground="{ThemeResource SystemAccentColor}" TextWrapping="Wrap">
-                    <Paragraph>1.	Страница планирования и составления задач (Kanban, to-do list, canvas схема)
-                        <LineBreak/>
-                        2.	Рабочая страница, где происходит работа над задачей и оставление фидбека (помадоро timer,матрица Эйзенхаура)
-                        <LineBreak/>
-                        3.	Страница статистики
-                        <LineBreak/>
-                        4.	Страница настроек
-                        <LineBreak/>
-                        5.	Главная страница(краткая статистика, наиболее частые задачи, последние обновления)
-                    </Paragraph>
-                </RichTextBlock>
+                        <RelativePanel>
+                            <FontIcon FontSize="34" FontFamily="Segoe MDL2 Assets" Glyph="&#xE10b;" RelativePanel.AlignLeftWithPanel="True"
+                              RelativePanel.AlignRightWithPanel="True"
+                              RelativePanel.AlignBottomWithPanel="True"
+                              RelativePanel.AlignTopWithPanel="True">
+
+                            </FontIcon>
+                            <TextBlock FontSize="16" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignBottomWithPanel="True">Статистика</TextBlock>
+                        </RelativePanel>
+
+                    </Button>
+                </VariableSizedWrapGrid>
+            </StackPanel>
+            <StackPanel VariableSizedWrapGrid.ColumnSpan="3" VariableSizedWrapGrid.RowSpan="3">
+                <TextBlock Text="Последняя активность" FontWeight="ExtraLight" FontSize="26"/>
+                <VariableSizedWrapGrid MinHeight="300" Margin="15"  MaximumRowsOrColumns="4">
+                    <StackPanel Orientation="Horizontal" Margin="5">
+                        <Grid Background="{ThemeResource SystemAccentColor}" MinWidth="120">
+                            <TextBlock Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" Text="18:40 26.07.2025:"/>
+                        </Grid>
+                        <TextBlock Margin="15,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Удалена задача 'TaskName'"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="5">
+                        <Grid Background="{ThemeResource SystemAccentColor}" MinWidth="120">
+                            <TextBlock Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" Text="18:40 26.07.2025:"/>
+                        </Grid>
+                        <TextBlock Margin="15,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Удалена задача 'TaskName'"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="5">
+                        <Grid Background="{ThemeResource SystemAccentColor}" MinWidth="120">
+                            <TextBlock Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" Text="18:40 26.07.2025:"/>
+                        </Grid>
+                        <TextBlock Margin="15,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Удалена задача 'TaskName'"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="5">
+                        <Grid Background="{ThemeResource SystemAccentColor}" MinWidth="120">
+                            <TextBlock Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" Text="18:40 26.07.2025:"/>
+                        </Grid>
+                        <TextBlock Margin="15,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Удалена задача 'TaskName'"/>
+                    </StackPanel>
+                </VariableSizedWrapGrid>
             </StackPanel>
         </VariableSizedWrapGrid>
     </RelativePanel>  

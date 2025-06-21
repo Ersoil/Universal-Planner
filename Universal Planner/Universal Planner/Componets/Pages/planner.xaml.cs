@@ -27,13 +27,13 @@ namespace Universal_Planner.Pages
         public planner()
         {
             this.InitializeComponent();
-            this.DataContext = GloabalData.Instance;
+            this.DataContext = GlobalData.Instance;
             TaskViewEdit.DataContext = SelectedTask;
         }
 
         private void CreateTask_Click(object sender, RoutedEventArgs e)
         {
-            GloabalData.Instance.TaskViewList.Add(new TaskViewModel(new UTask()));
+            GlobalData.Instance.TaskViewList.Add(new TaskViewModel(new UTask()));
         }
 
         private void TaskListView_SelectionChanged(object sender, SelectionChangedEventArgs e)

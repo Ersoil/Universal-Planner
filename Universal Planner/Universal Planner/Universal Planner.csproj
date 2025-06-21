@@ -121,7 +121,6 @@
     </Compile>
     <Compile Include="Componets\Models\Tag.cs" />
     <Compile Include="Componets\Models\Task.cs" />
-    <Compile Include="Componets\Models\TaskTag.cs" />
     <Compile Include="Componets\Models\User.cs" />
     <Compile Include="Componets\Pages\PomodoroPage.xaml.cs">
       <DependentUpon>PomodoroPage.xaml</DependentUpon>
@@ -138,7 +137,7 @@
     <Compile Include="Componets\Pages\Statistics.xaml.cs">
       <DependentUpon>Statistics.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Componets\viewModels\GloabalData.cs" />
+    <Compile Include="Componets\viewModels\GlobalData.cs" />
     <Compile Include="Componets\viewModels\TaskViewModel.cs" />
     <Compile Include="Componets\Pages\planner.xaml.cs">
       <DependentUpon>planner.xaml</DependentUpon>
@@ -251,11 +250,18 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite">
+      <Version>1.1.4</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools">
+      <Version>1.1.4</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.8</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

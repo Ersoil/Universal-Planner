@@ -27,7 +27,7 @@ namespace Universal_Planner.Pages
 
         private void OnExampleToggleToggled(object sender, RoutedEventArgs e)
         {
-            new MessageDialog(Convert.ToString(GloabalData.Instance.TaskViewList.Count)).ShowAsync();
+            new MessageDialog(Convert.ToString(GlobalData.Instance.TaskViewList.Count)).ShowAsync();
         }
     }
 }
