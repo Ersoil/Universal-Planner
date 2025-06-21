@@ -1,15 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
+  <Roots.Interfaces>
+    <RootInterface FullName="Windows.UI.Xaml.Data.IValueConverter" />
+  </Roots.Interfaces>
   <Roots.PropertyPathNames>
-    <RootPropertyPathName Name="SelectedTask" />
+    <RootPropertyPathName Name="SelectedItem" />
+    <RootPropertyPathName Name="TimePart" />
+    <RootPropertyPathName Name="DatePart" />
+    <RootPropertyPathName Name="IsCompleted" />
+    <RootPropertyPathName Name="Description" />
     <RootPropertyPathName Name="Title" />
     <RootPropertyPathName Name="TaskViewList" />
+    <RootPropertyPathName Name="IsSubtask" />
     <RootPropertyPathName Name="DueDate" />
-    <RootPropertyPathName Name="Description" />
     <RootPropertyPathName Name="PaneBackground" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
-    <RootType FullName="Windows.UI.Xaml.Application" />
+    <RootType FullName="Windows.UI.Xaml.Application">
+      <RootProperty Name="Resources" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.ResourceDictionary">
+      <RootProperty Name="MergedDictionaries" />
+      <RootProperty Name="Source" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Background" />
       <RootProperty Name="Content" />
@@ -21,13 +34,17 @@
       <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="Children" />
+      <RootProperty Name="DataContext" />
       <RootProperty Name="Background" />
       <RootProperty Name="MinHeight" />
+      <RootProperty Name="AllowDrop" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
       <RootProperty Name="MinWidth" />
+      <RootEvent Name="DragOver" />
+      <RootEvent Name="Drop" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
       <RootMethod Name="GetColumnSpan" />
@@ -49,10 +66,13 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Background" />
       <RootProperty Name="MinHeight" />
+      <RootProperty Name="AllowDrop" />
       <RootProperty Name="DataContext" />
       <RootProperty Name="Orientation" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Padding" />
+      <RootEvent Name="DragOver" />
+      <RootEvent Name="Drop" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="Text" />
@@ -60,6 +80,7 @@
       <RootProperty Name="FontWeight" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="Foreground" />
+      <RootProperty Name="TextTrimming" />
       <RootProperty Name="Width" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
@@ -74,10 +95,10 @@
       <RootProperty Name="Background" />
       <RootProperty Name="Child" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.Viewbox">
-      <RootProperty Name="Child" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="MinHeight" />
+    <RootType FullName="Windows.UI.Xaml.Controls.CheckBox">
+      <RootProperty Name="Content" />
+      <RootProperty Name="IsChecked" />
+      <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.VariableSizedWrapGrid">
       <RootProperty Name="ItemHeight" />
@@ -122,27 +143,30 @@
     <RootType FullName="Windows.UI.Xaml.Controls.Flyout">
       <RootProperty Name="Placement" />
       <RootProperty Name="Content" />
+      <RootEvent Name="Opened" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.CalendarDatePicker" />
-    <RootType FullName="Windows.UI.Xaml.Controls.TimePicker" />
+    <RootType FullName="Windows.UI.Xaml.Data.Binding">
+      <RootProperty Name="ElementName" />
+      <RootProperty Name="Path" />
+      <RootProperty Name="Mode" />
+      <RootProperty Name="UpdateSourceTrigger" />
+      <RootProperty Name="Converter" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.DatePicker">
+      <RootProperty Name="Date" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TimePicker">
+      <RootProperty Name="Time" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Primitives.ToggleButton">
       <RootProperty Name="Margin" />
       <RootProperty Name="Content" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.RichEditBox">
-      <RootProperty Name="Background" />
-      <RootProperty Name="BorderThickness" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="VerticalAlignment" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Data.Binding">
-      <RootProperty Name="Mode" />
-      <RootProperty Name="UpdateSourceTrigger" />
-      <RootProperty Name="ElementName" />
-      <RootProperty Name="Path" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="Text" />
+      <RootProperty Name="AcceptsReturn" />
+      <RootProperty Name="TextWrapping" />
+      <RootProperty Name="MinHeight" />
       <RootProperty Name="Margin" />
       <RootProperty Name="BorderThickness" />
       <RootProperty Name="FontWeight" />
@@ -165,20 +189,23 @@
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="MinWidth" />
+      <RootProperty Name="CanDragItems" />
       <RootProperty Name="ItemTemplate" />
       <RootProperty Name="ItemContainerStyle" />
       <RootProperty Name="SelectionMode" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Items" />
       <RootEvent Name="SelectionChanged" />
+      <RootEvent Name="DragItemsStarting" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RelativePanel">
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Background" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="RenderTransform" />
       <RootProperty Name="Children" />
       <RootMethod Name="GetAlignRightWithPanel" />
       <RootMethod Name="SetAlignRightWithPanel" />
@@ -193,6 +220,10 @@
       <RootMethod Name="GetBelow" />
       <RootMethod Name="SetBelow" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.TranslateTransform">
+      <RootProperty Name="X" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListViewItem">
       <RootProperty Name="Content" />
       <RootProperty Name="Tag" />
@@ -215,9 +246,6 @@
       <RootProperty Name="Value" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RadioButton">
-      <RootProperty Name="Content" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.CheckBox">
       <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Universal_Planner.Pages.planner" />
@@ -277,6 +305,11 @@
     </RootType>
     <RootType FullName="Universal_Planner.Pages.SettingsPageGeneral" />
     <RootType FullName="Universal_Planner.Componets.Pages.SettingsPagePomodoro" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Viewbox">
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="MinHeight" />
+      <RootProperty Name="Child" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Shapes.Rectangle">
       <RootProperty Name="Height" />
       <RootProperty Name="Fill" />
@@ -285,14 +318,18 @@
       <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="Universal_Planner.Componets.Pages.Statistics" />
-    <RootType FullName="Windows.UI.Xaml.ResourceDictionary">
-      <RootProperty Name="MergedDictionaries" />
-      <RootProperty Name="Source" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ControlTemplate">
       <RootProperty Name="TargetType" />
       <RootProperty Name="Template" />
     </RootType>
+    <RootType FullName="Universal_Planner.Componets.Converters.DateOnlyConverter" />
+    <RootType FullName="Universal_Planner.Componets.Converters.TimeOnlyConverter" />
+    <RootType FullName="Universal_Planner.Componets.Converters.DateTimeToStringConverter">
+      <RootProperty Name="Format" />
+    </RootType>
+    <RootType FullName="Universal_Planner.Componets.Converters.BoolToIndent" />
+    <RootType FullName="Universal_Planner.Componets.Converters.LevelIndent" />
+    <RootType FullName="Universal_Planner.Componets.Converters.LevelToMargin" />
     <RootType FullName="Windows.UI.Xaml.VisualStateManager">
       <RootMethod Name="GetVisualStateGroups" />
     </RootType>
@@ -335,7 +372,6 @@
       <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Frame" />
-    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Universal_Planner.MainPage" />
     <RootType FullName="Universal_Planner.Pages.StartScreen" />
   </Roots.RootTypes>

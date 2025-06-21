@@ -105,8 +105,7 @@
                 <Border BorderBrush="{ThemeResource SystemAccentColor}" BorderThickness="1"/>
                 <TextBlock Margin="15,5,0,0" Text="Всего задач создано: 127" FontWeight="Light" FontSize="14"/>
                 <TextBlock Margin="15,5,0,0" Text="Среднее время выполнения задачи: 2 дня" FontWeight="Light" FontSize="14"/>
-                <TextBlock Margin="15,5,0,0" Text="Данные о задачах" FontWeight="Light" FontSize="14"/>
-                <TextBlock Margin="15,5,0,0" Text="Данные о задачах" FontWeight="Light" FontSize="14"/>
+
                 <TextBlock Margin="10" Text="Временная статистика" Foreground="{ThemeResource SystemAccentColor}" FontWeight="ExtraLight" FontSize="18"/>
                 <Border BorderBrush="{ThemeResource SystemAccentColor}" BorderThickness="1"/>
                 <TextBlock Margin="15,5,0,0" Text="Чаще всего вы завершаете задачи в 14:00–16:00" FontWeight="Light" FontSize="14"/>

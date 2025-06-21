@@ -2,10 +2,13 @@
     x:Class="Universal_Planner.Pages.planner"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Universal_Planner.Componets.Resources"
+    xmlns:viewModels="using:Universal_Planner.Componets.viewModels"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
     <Grid Margin="80 20 20 20">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.4*"></ColumnDefinition>
@@ -26,13 +29,13 @@
                     <RowDefinition Height="2*"/>
                 </Grid.RowDefinitions>
                 <StackPanel Grid.Row="0">
-                    <TextBlock x:ConnectionId='4' Text="Задачи" Margin="0 0 0 10" x:Name="ListHeader" FontWeight="ExtraLight" FontSize="26"/>
+                    <TextBlock x:ConnectionId='9' Text="Задачи" Margin="0 0 0 10" x:Name="ListHeader" FontWeight="ExtraLight" FontSize="26"/>
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="6*"/>
                             <ColumnDefinition Width="3*"/>
                         </Grid.ColumnDefinitions>
-                        <TextBox Foreground="{ThemeResource SystemAccentColor}" Text="Поиск" Grid.Column="0" Margin="0,15,0,15"/>
+                        <TextBox Foreground="{ThemeResource SystemAccentColor}" PlaceholderText="Поиск" Grid.Column="0" Margin="0,15,0,15"/>
                         <StackPanel Orientation="Horizontal" Grid.Column="1">
                             <Button  Foreground="White" FontSize="12" Background="{ThemeResource SystemAccentColor}" Margin="0,15,0,15" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                                 <FontIcon Glyph="&#xE16E;"></FontIcon>
@@ -51,7 +54,7 @@
                                     </Flyout>
                                 </Button.Flyout>
                             </Button>
-                            <Button x:ConnectionId='5' Foreground="White" FontSize="12" Background="{ThemeResource SystemAccentColor}" Margin="0,15,0,15" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                         >
+                            <Button x:ConnectionId='10' Foreground="White" FontSize="12" Background="{ThemeResource SystemAccentColor}" Margin="0,15,0,15" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                         >
                                 <FontIcon Glyph="&#xE109;"></FontIcon>
                             </Button>
                         </StackPanel>
@@ -59,18 +62,31 @@
                     <Border BorderThickness="1" BorderBrush="{ThemeResource SystemAccentColor}"/>
                 </StackPanel>
                 <ScrollViewer Grid.Row="1">
-                    <ListView x:ConnectionId='3' ItemsSource="{Binding TaskViewList}" MinWidth="250"                                                 >
+                    <ListView x:ConnectionId='8' x:Name="TaskListView" ItemsSource="{Binding TaskViewList}" MinWidth="300"                                                  CanDragItems="True"                                                   >
                         <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <RelativePanel HorizontalAlignment="Stretch" Background="{ThemeResource SystemControlBackgroundChromeMediumLowBrush}" Margin="5">
-                                    <StackPanel Margin="20 10 0 0" >
-                                        <TextBlock FontWeight="ExtraLight" FontSize="16" Text="{Binding Title}"/>
-                                        <TextBlock Text="{Binding Description}"  FontSize="12" Margin="40,10,0,10"/>
+                            <DataTemplate                                       xmlns:viewModels="using:Universal_Planner.Componets.viewModels">
+                                <RelativePanel Margin="5"
+                   Background="{ThemeResource SystemControlBackgroundChromeMediumLowBrush}"
+                   HorizontalAlignment="Stretch">
+                                    <RelativePanel.RenderTransform>
+                                        <TranslateTransform X="{Binding IsSubtask,
+                               Mode=OneWay,
+                               Converter={StaticResource BoolToIndent}}"/>
+                                    </RelativePanel.RenderTransform>
+
+                                    <StackPanel Margin="20 10 0 0">
+                                        <TextBlock Text="{Binding Title}" FontSize="14" FontWeight="ExtraLight" TextTrimming="CharacterEllipsis"/>
+                                        <TextBlock Text="{Binding Description}" FontSize="12" TextTrimming="CharacterEllipsis" Margin="40,10,0,10"/>
                                     </StackPanel>
                                     <Button Background="{ThemeResource SystemAccentColor}" Foreground="White" MinWidth="90" Margin="0,0,20,0" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True">
                                         <FontIcon HorizontalAlignment="Stretch" FontSize="12" Glyph="&#xE1CB;"/>
                                     </Button>
-                                    <TextBlock Margin="10" Text="{Binding DueDate}" FontSize="12" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True"/>
+                                    <TextBlock Text="{Binding DueDate,
+                                 Converter={StaticResource DateTimeFmt}}"
+                   FontSize="12"
+                   Margin="10"
+                   RelativePanel.AlignRightWithPanel="True"
+                   RelativePanel.AlignBottomWithPanel="True"/>
                                     <Border RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="true" RelativePanel.AlignRightWithPanel="True" BorderBrush="{ThemeResource SystemAccentColor}" BorderThickness="3"/>
                                 </RelativePanel>
                             </DataTemplate>
@@ -87,9 +103,18 @@
                         </ListView.ItemContainerStyle>
                     </ListView>
                 </ScrollViewer>
-                <Grid Grid.Row="2" Margin="5" Background="{ThemeResource SystemAccentColor}">
-                    <FontIcon Foreground="White" Glyph="&#xE107;"></FontIcon>
+                <Grid x:ConnectionId='7' x:Name="TrashZone"
+      Grid.Row="2"
+      Margin="5"
+      Background="{ThemeResource SystemAccentColor}"
+      AllowDrop="True"                   
+                                                 
+                           >
+
+                    <FontIcon Foreground="White"
+              Glyph="&#xE107;"/>
                 </Grid>
+
             </Grid>
         </Grid>
         <Grid Column="1" Row="1" Margin="30 0 0 0">
@@ -99,8 +124,8 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <StackPanel VerticalAlignment="Stretch">
-                    <StackPanel x:ConnectionId='1' x:Name="TaskViewEdit" DataContext="{Binding SelectedTask, Mode=TwoWay}" Orientation="Horizontal">
-                        <TextBox x:ConnectionId='2' Text="{Binding SelectedTask.Title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="0 0 0 10" BorderThickness="0" x:Name="taskTitle" FontWeight="ExtraLight" FontSize="26"/>
+                    <StackPanel x:ConnectionId='2' x:Name="TaskViewEdit" DataContext="{Binding ElementName=TaskListView, Path=SelectedItem}" Orientation="Horizontal">
+                        <TextBox x:ConnectionId='6' Text="{Binding Title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="0 0 0 10" BorderThickness="0" x:Name="taskTitle" FontWeight="ExtraLight" FontSize="26"/>
 
                         <Button VerticalAlignment="Stretch" Foreground="{ThemeResource SystemAccentColor}" Background="Transparent" BorderThickness="0">
                             <FontIcon Glyph="&#xE18B;"></FontIcon>
@@ -134,11 +159,20 @@
                         </Button>
                     </StackPanel>
                     <TextBlock Text="Описание" Margin="15 10 0 10" FontWeight="ExtraLight" FontSize="18"/>
-                    <Grid Background="{ThemeResource SystemControlBackgroundChromeMediumLowBrush}" MinHeight="250">
-                        <RichEditBox Background="Transparent" BorderThickness="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></RichEditBox>
+                    <Grid DataContext="{Binding ElementName=TaskListView, Path=SelectedItem}" Background="{ThemeResource SystemControlBackgroundChromeMediumLowBrush}" MinHeight="250">
+                        <TextBox Text="{Binding Description,
+                       Mode=TwoWay,
+                       UpdateSourceTrigger=PropertyChanged}"
+         AcceptsReturn="True"
+         TextWrapping="Wrap"
+         MinHeight="250"/>
                     </Grid>
+                    <CheckBox Content="Выполнено"
+          IsChecked="{Binding IsCompleted,
+                              Mode=TwoWay,
+                              UpdateSourceTrigger=PropertyChanged}"
+          Margin="15,10,0,10"/>
                     <TextBlock  Text="Напоминания и дедлайны" Margin="15 0 0 10" FontWeight="ExtraLight" FontSize="18"/>
-                    <Viewbox>
                     <StackPanel Orientation="Horizontal">
                         <Button Margin="5" Background="{ThemeResource SystemControlBackgroundChromeMediumLowBrush}" BorderThickness="0">
                             <StackPanel Orientation="Horizontal">
@@ -170,18 +204,32 @@
                                 <TextBlock Text="Установить дедлайн" FontSize="12" Margin="5"/>
                             </StackPanel>
                             <Button.Flyout>
-                                <Flyout Placement="Bottom">
-                                    <StackPanel>
-                                        <TextBlock Margin="5" Text="День сдачи" Foreground="{ThemeResource SystemAccentColor}" FontWeight="Light" FontSize="16"/>
-                                        <CalendarDatePicker/>
-                                        <TextBlock Margin="5" Text="Время сдачи" Foreground="{ThemeResource SystemAccentColor}"  FontWeight="Light" FontSize="16"/>
-                                        <TimePicker/>
+                                <Flyout x:ConnectionId='3' Placement="Bottom"                               >
+                                    <StackPanel DataContext="{Binding ElementName=TaskListView, Path=SelectedItem}">
+                                        <TextBlock Text="Дата"
+                       Margin="5"
+                       Foreground="{ThemeResource SystemAccentColor}"
+                       FontWeight="Light"
+                       FontSize="16"/>
+
+                                        <DatePicker x:ConnectionId='4' x:Name="DueDatePicker"
+                        Date="{Binding DatePart,
+                                       Mode=TwoWay}"/>
+
+                                        <TextBlock Text="Время"
+                       Margin="5"
+                       Foreground="{ThemeResource SystemAccentColor}"
+                       FontWeight="Light"
+                       FontSize="16"/>
+
+                                        <TimePicker x:ConnectionId='5' x:Name="DueTimePicker"
+                        Time="{Binding TimePart,
+                                       Mode=TwoWay}"/>
                                     </StackPanel>
                                 </Flyout>
                             </Button.Flyout>
                         </Button>
                     </StackPanel>
-                    </Viewbox>
                     <TextBlock  Text="Теги" Margin="15 10 0 10"  FontWeight="ExtraLight" FontSize="18"/>
                     <StackPanel Background="{ThemeResource SystemControlBackgroundChromeMediumLowBrush}" MinHeight="50">
                         <Button Foreground="White" Margin="5" Background="{ThemeResource SystemAccentColor}" BorderThickness="0">
@@ -197,8 +245,13 @@
                 <StackPanel Grid.Column="1">
                     <TextBlock Text="Подзадачи" Margin="10,0,50,10" FontWeight="ExtraLight" FontSize="26"/>
                     <Border Margin="15 10 15 10" BorderThickness="5" BorderBrush="{ThemeResource SystemAccentColor}"/>
-                    <StackPanel Margin="15" Background="{ThemeResource SystemControlBackgroundChromeMediumLowBrush}" MinHeight="715">
-                    </StackPanel>
+                    <StackPanel x:ConnectionId='1' x:Name="SubtaskDropZone"
+                Margin="15"
+                Background="{ThemeResource SystemControlBackgroundChromeMediumLowBrush}"
+                MinHeight="715"
+                AllowDrop="True"
+                                               
+                                       />
                 </StackPanel>
             </Grid>
         </Grid>

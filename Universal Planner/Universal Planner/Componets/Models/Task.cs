@@ -1,31 +1,36 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Universal_Planner.Componets.Models
 {
+    [Table("Tasks")]
     public class UTask
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
+
+        [Required]
         public string Title { get; set; }
+
         public string Description { get; set; }
         public bool IsCompleted { get; set; }
+        public DateTime CreateDateTime { get; set; }
         public DateTime DueDate { get; set; }
-        private int ID;
 
         public UTask()
         {
-            Title = "Task Title";
-            Description = "Task Description";
+            Title = "Новая задача";
+            Description = "...";
             IsCompleted = false;
             DueDate = DateTime.MinValue;
         }
 
-        public UTask(string Title, string Description,bool isCompleted)
+        public UTask(string title, string description, bool isCompleted)
         {
-            this.Title = Title;
-            this.Description = Description;
+            Title = title;
+            Description = description;
             IsCompleted = isCompleted;
             DueDate = DateTime.MinValue;
         }

@@ -119,6 +119,13 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Componets\Converters\BoolToIndent.cs" />
+    <Compile Include="Componets\Converters\DateOnlyConverter.cs" />
+    <Compile Include="Componets\Converters\DateTimeToStringConverter.cs" />
+    <Compile Include="Componets\Converters\LevelIndent.cs" />
+    <Compile Include="Componets\Converters\LevelToMargin.cs" />
+    <Compile Include="Componets\Converters\TimeOnlyConverter.cs" />
+    <Compile Include="Componets\Data\AppDbContext.cs" />
     <Compile Include="Componets\Models\Tag.cs" />
     <Compile Include="Componets\Models\Task.cs" />
     <Compile Include="Componets\Models\User.cs" />

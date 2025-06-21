@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-06-21T10:06:38.153</Modified>
+      <Modified>2025-06-21T13:38:40.204</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Universal Planner.exe">
       <PackagePath>entrypoint\Universal Planner.exe</PackagePath>
-      <Modified>2025-06-21T10:06:37.474</Modified>
+      <Modified>2025-06-21T13:38:39.540</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\.nuget\packages\microsoft.aspnetcore.hosting.abstractions\1.1.3\lib\netstandard1.3\Microsoft.AspNetCore.Hosting.Abstractions.dll">
       <PackagePath>Microsoft.AspNetCore.Hosting.Abstractions.dll</PackagePath>
@@ -605,287 +605,287 @@
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:15.101</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\LargeTile.scale-125.png">
       <PackagePath>Assets\LargeTile.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:15.141</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\LargeTile.scale-150.png">
       <PackagePath>Assets\LargeTile.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:15.191</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\LargeTile.scale-200.png">
       <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:15.267</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\LargeTile.scale-400.png">
       <PackagePath>Assets\LargeTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:15.513</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\SmallTile.scale-100.png">
       <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:14.503</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\SmallTile.scale-125.png">
       <PackagePath>Assets\SmallTile.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:14.524</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\SmallTile.scale-150.png">
       <PackagePath>Assets\SmallTile.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:14.544</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\SmallTile.scale-200.png">
       <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:14.566</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\SmallTile.scale-400.png">
       <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:14.601</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:15.846</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\SplashScreen.scale-125.png">
       <PackagePath>Assets\SplashScreen.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:15.904</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\SplashScreen.scale-150.png">
       <PackagePath>Assets\SplashScreen.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:15.978</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\SplashScreen.scale-400.png">
       <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:16.509</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\Square150x150Logo.scale-100.png">
       <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:14.658</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\Square150x150Logo.scale-125.png">
       <PackagePath>Assets\Square150x150Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:14.682</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\Square150x150Logo.scale-150.png">
       <PackagePath>Assets\Square150x150Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:14.709</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\Square150x150Logo.scale-400.png">
       <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:14.820</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:15.721</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:15.803</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-32.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:15.753</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:15.770</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\Square44x44Logo.scale-100.png">
       <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:15.530</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\Square44x44Logo.scale-125.png">
       <PackagePath>Assets\Square44x44Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:15.547</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\Square44x44Logo.scale-150.png">
       <PackagePath>Assets\Square44x44Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:15.565</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\Square44x44Logo.scale-400.png">
       <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:15.608</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\Square44x44Logo.targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:15.624</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\Square44x44Logo.targetsize-24.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:15.640</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\Square44x44Logo.targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:15.705</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\Square44x44Logo.targetsize-32.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-32.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:15.656</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\Square44x44Logo.targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:15.674</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:16.541</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\StoreLogo.scale-125.png">
       <PackagePath>Assets\StoreLogo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:16.559</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\StoreLogo.scale-150.png">
       <PackagePath>Assets\StoreLogo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:16.576</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\StoreLogo.scale-200.png">
       <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:16.595</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\StoreLogo.scale-400.png">
       <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:16.620</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\Wide310x150Logo.scale-100.png">
       <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:14.844</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\Wide310x150Logo.scale-125.png">
       <PackagePath>Assets\Wide310x150Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:14.872</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\Wide310x150Logo.scale-150.png">
       <PackagePath>Assets\Wide310x150Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:14.904</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\Wide310x150Logo.scale-400.png">
       <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:15.070</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2024-10-25T17:48:15.951</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:16.093</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:14.743</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:15.583</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:15.737</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-14T18:36:14.947</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2025-05-08T08:47:04.571</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Componets\Resources\Sounds\pink-noise-235.mp3">
       <PackagePath>Componets\Resources\Sounds\pink-noise-235.mp3</PackagePath>
-      <Modified>2025-06-20T09:03:49.874</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\Componets\Resources\Sounds\underwater-white-noise-46423.mp3">
       <PackagePath>Componets\Resources\Sounds\underwater-white-noise-46423.mp3</PackagePath>
-      <Modified>2025-06-20T09:03:49.878</Modified>
+      <Modified>2025-06-21T11:54:13.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Universal Planner.xr.xml">
       <PackagePath>Universal Planner.xr.xml</PackagePath>
-      <Modified>2025-06-21T09:40:18.783</Modified>
+      <Modified>2025-06-21T13:20:07.734</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2025-06-21T06:38:25.121</Modified>
+      <Modified>2025-06-21T13:20:07.786</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Componets\Pages\planner.xbf">
       <PackagePath>Componets\Pages\planner.xbf</PackagePath>
-      <Modified>2025-06-21T08:48:11.481</Modified>
+      <Modified>2025-06-21T13:20:07.787</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Componets\Pages\PomodoroPage.xbf">
       <PackagePath>Componets\Pages\PomodoroPage.xbf</PackagePath>
-      <Modified>2025-06-21T06:38:25.121</Modified>
+      <Modified>2025-06-21T12:29:58.185</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Componets\Pages\SettingsPage.xbf">
       <PackagePath>Componets\Pages\SettingsPage.xbf</PackagePath>
-      <Modified>2025-06-21T06:38:25.122</Modified>
+      <Modified>2025-06-21T12:29:58.185</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Componets\Pages\SettingsPageGeneral.xbf">
       <PackagePath>Componets\Pages\SettingsPageGeneral.xbf</PackagePath>
-      <Modified>2025-06-21T06:38:25.122</Modified>
+      <Modified>2025-06-21T12:29:58.185</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Componets\Pages\SettingsPagePomodoro.xbf">
       <PackagePath>Componets\Pages\SettingsPagePomodoro.xbf</PackagePath>
-      <Modified>2025-06-21T06:38:25.123</Modified>
+      <Modified>2025-06-21T12:29:58.186</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Componets\Pages\Statistics.xbf">
       <PackagePath>Componets\Pages\Statistics.xbf</PackagePath>
-      <Modified>2025-06-21T09:40:18.825</Modified>
+      <Modified>2025-06-21T12:29:58.186</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Componets\Resources\main.xbf">
       <PackagePath>Componets\Resources\main.xbf</PackagePath>
-      <Modified>2025-06-21T10:06:37.214</Modified>
+      <Modified>2025-06-21T13:38:39.278</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2025-06-21T06:38:25.124</Modified>
+      <Modified>2025-06-21T12:29:58.186</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Componets\Pages\StartScreen.xbf">
       <PackagePath>Componets\Pages\StartScreen.xbf</PackagePath>
-      <Modified>2025-06-21T10:06:37.215</Modified>
+      <Modified>2025-06-21T12:29:58.187</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -893,11 +893,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-06-21T06:39:55.871</Modified>
+      <Modified>2025-06-21T13:20:09.647</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Core\Universal Planner.exe">
       <PackagePath>Universal Planner.exe</PackagePath>
-      <Modified>2025-06-21T10:06:38.140</Modified>
+      <Modified>2025-06-21T13:38:40.191</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

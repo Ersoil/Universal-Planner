@@ -1,0 +1,96 @@
+﻿<Page
+    x:Class="Universal_Planner.Pages.planner"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Universal_Planner.Componets.Resources"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Margin="80 20 20 20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.4*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Grid.ColumnSpan="2">
+            <TextBlock Text="Планирование" FontWeight="ExtraLight" FontSize="34" Foreground="{ThemeResource SystemAccentColor}"/>
+        </Grid>
+
+        <Grid Column="0" Grid.Row="1">
+            <ScrollViewer>
+                <StackPanel>
+                    <TextBlock x:ConnectionId='2' Text="Задачи" Margin="0 0 0 10" x:Name="ListHeader" FontWeight="ExtraLight" FontSize="26"/>
+                    <Border BorderThickness="1" BorderBrush="{ThemeResource SystemBaseHighColor}"/>
+                    <ListView ItemsSource="{Binding TaskViewList}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <RelativePanel HorizontalAlignment="Stretch" Background="{ThemeResource SystemAccentColorDark1}">
+                                    <StackPanel Margin="20 10 0 0" >
+                                        <TextBlock FontWeight="ExtraLight" FontSize="16" Text="{Binding Title}" Foreground="White"/>
+                                        <TextBlock Text="{Binding Description}"  FontSize="12" Foreground="White" Margin="40,10,0,10"/>
+                                    </StackPanel>
+                                    <Grid Background="Yellow" MinWidth="90" Margin="0,0,20,0" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True">
+                                        <TextBlock HorizontalAlignment="Stretch" FontSize="12" TextAlignment="Center" Foreground="Black" Text="#Tag"/>
+                                    </Grid>
+                                    <TextBlock Text="{Binding DueDate}" FontSize="12" Foreground="White" Margin="5" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignRightWithPanel="True"/>
+                                </RelativePanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+
+                        <ListView.ItemContainerStyle>
+                            <Style TargetType="ListViewItem">
+                                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                                <Setter Property="BorderThickness" Value="0"/>
+                                <Setter Property="Padding" Value="0"/>
+                                <Setter Property="Margin" Value="0,2"/>
+                                <Setter Property="Background" Value="Transparent"/>
+                            </Style>
+                        </ListView.ItemContainerStyle>
+                    </ListView>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+        <Grid Column="1" Row="1" Margin="30 0 0 0">
+            <ScrollViewer>
+                <StackPanel>
+                    <TextBlock x:ConnectionId='1' Text="Имя задачи" Margin="0 0 0 10" x:Name="TaskName" FontWeight="ExtraLight" FontSize="26"/>
+                    <Border BorderThickness="1" BorderBrush="{ThemeResource SystemBaseHighColor}"/>
+                    <VariableSizedWrapGrid Margin="30" Orientation="Horizontal" VerticalAlignment="Stretch" ItemHeight="150" ItemWidth="200">
+                        <StackPanel VariableSizedWrapGrid.ColumnSpan="4" VariableSizedWrapGrid.RowSpan="2">
+                            <TextBlock Text="Описание" FontWeight="Light" FontSize="18"/>
+                            <Border BorderBrush="{ThemeResource SystemAccentColor}" BorderThickness="1"/>
+                            <RichEditBox Margin="40,30,40,00" MinHeight="200"/>
+                            <CommandBar Margin="40,0,40,30" >
+                                <AppBarButton Icon="Bold"></AppBarButton>
+                                <AppBarButton Icon="Italic"></AppBarButton>
+                                <AppBarButton Icon="FontColor"></AppBarButton>
+                                <AppBarSeparator></AppBarSeparator>
+                            </CommandBar>
+                        </StackPanel>
+                        <StackPanel VariableSizedWrapGrid.ColumnSpan="2" VariableSizedWrapGrid.RowSpan="2">
+                            <TextBlock Text="Дата выполнения" FontWeight="Light" FontSize="18"/>
+                            <Border BorderBrush="{ThemeResource SystemAccentColor}" BorderThickness="1"/>
+                            <DatePicker Margin="40,30,40,0"/>
+                        </StackPanel>
+                        <StackPanel  VariableSizedWrapGrid.ColumnSpan="2" VariableSizedWrapGrid.RowSpan="4">
+                            <TextBlock Text="Напомнить" FontWeight="Light" FontSize="18"/>
+                            <Border BorderBrush="{ThemeResource SystemAccentColor}" BorderThickness="1"/>
+                            <CalendarView Margin="40,30,40,0"/>
+                            <TimePicker Margin="40,30,40,0"/>
+                        </StackPanel>
+                        <StackPanel VariableSizedWrapGrid.ColumnSpan="4" VariableSizedWrapGrid.RowSpan="2">
+                            <TextBlock Text="Файлы и заметки" FontWeight="Light" FontSize="18"/>
+                            <Border BorderBrush="{ThemeResource SystemAccentColor}" BorderThickness="1"/>
+                        </StackPanel>
+                    </VariableSizedWrapGrid>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Page>
+
