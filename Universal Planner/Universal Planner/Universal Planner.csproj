@@ -126,9 +126,11 @@
     <Compile Include="Componets\Converters\LevelToMargin.cs" />
     <Compile Include="Componets\Converters\TimeOnlyConverter.cs" />
     <Compile Include="Componets\Data\AppDbContext.cs" />
+    <Compile Include="Componets\Models\Log.cs" />
     <Compile Include="Componets\Models\Tag.cs" />
     <Compile Include="Componets\Models\Task.cs" />
     <Compile Include="Componets\Models\User.cs" />
+    <Compile Include="Componets\Models\UTaskTag.cs" />
     <Compile Include="Componets\Pages\PomodoroPage.xaml.cs">
       <DependentUpon>PomodoroPage.xaml</DependentUpon>
     </Compile>
@@ -144,6 +146,7 @@
     <Compile Include="Componets\Pages\Statistics.xaml.cs">
       <DependentUpon>Statistics.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Componets\viewModels\EventBus.cs" />
     <Compile Include="Componets\viewModels\GlobalData.cs" />
     <Compile Include="Componets\viewModels\TaskViewModel.cs" />
     <Compile Include="Componets\Pages\planner.xaml.cs">

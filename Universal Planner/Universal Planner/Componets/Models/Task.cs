@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -19,12 +20,26 @@ namespace Universal_Planner.Componets.Models
         public DateTime CreateDateTime { get; set; }
         public DateTime DueDate { get; set; }
 
+
+        public int? ParentTaskId { get; set; }
+
+
+        [ForeignKey("ParentTaskId")]
+        public virtual UTask ParentTask { get; set; }
+
+
+        public virtual ICollection<UTask> SubTasks { get; set; } = new List<UTask>();
+
+        public virtual ICollection<UTaskTag> TaskTags { get; set; }
+    = new List<UTaskTag>();
+
         public UTask()
         {
             Title = "Новая задача";
             Description = "...";
             IsCompleted = false;
             DueDate = DateTime.MinValue;
+            CreateDateTime = DateTime.Now;
         }
 
         public UTask(string title, string description, bool isCompleted)
@@ -33,6 +48,7 @@ namespace Universal_Planner.Componets.Models
             Description = description;
             IsCompleted = isCompleted;
             DueDate = DateTime.MinValue;
+            CreateDateTime = DateTime.Now;
         }
     }
 }

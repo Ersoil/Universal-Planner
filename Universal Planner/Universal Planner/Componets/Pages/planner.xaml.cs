@@ -1,8 +1,8 @@
-﻿using Windows.UI.Xaml;           // UIElement
-using Windows.UI.Xaml.Input;      // DragEventArgs
-using Windows.UI.Xaml.Controls;   // ListView
-using Windows.UI.Core;            // Dispatcher
-using Windows.UI.Xaml.Media;      // Visual feedback
+﻿using Windows.UI.Xaml;
+using Windows.UI.Xaml.Input;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Core;
+using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.UI.Xaml.Data;
 using Universal_Planner.Componets.viewModels;
@@ -10,6 +10,7 @@ using Universal_Planner.Componets.Models;
 using System.Diagnostics;
 using System;
 using Windows.ApplicationModel.DataTransfer;
+using Windows.UI.Popups;
 
 namespace Universal_Planner.Pages
 {
@@ -24,7 +25,9 @@ namespace Universal_Planner.Pages
 
         private void CreateTask()
         {
-            GlobalData.Instance.AddTask(new UTask());
+            var newTask = new UTask();
+            GlobalData.Instance.AddTask(newTask);
+            EventBus.onLogChanged?.Invoke($"Создана задача '{newTask.Title}'");
         }
 
         public void CreateTask_Click(object sender, RoutedEventArgs e)
@@ -53,33 +56,29 @@ namespace Universal_Planner.Pages
                     SelectedTask = selectedTask;
                 }
                 if (e.AddedItems.Count > 0)
-                    TaskViewEdit.DataContext = e.AddedItems[0];
+                    TaskViewEdit.DataContext = SelectedTask;
+                SubtasksListView.ItemsSource = SelectedTask.SubTasks;
             }
         }
 
         private void DeadlineFlyout_Opened(object sender, object e)
         {
             var flyout = (Flyout)sender;
-
             var root = flyout.Content as FrameworkElement;
             if (root != null)
                 root.DataContext = TaskListView.SelectedItem;
         }
 
-        // helper: вернуть количество прямых и вложенных потомков
         private int CountDescendants(TaskViewModel parent)
         {
-            var list = GlobalData.Instance.TaskViewList;
-            int pos = list.IndexOf(parent) + 1;
-            int count = 0;
-
-            while (pos < list.Count && IsDescendant(list[pos], parent))
+            int count = parent.SubTasks.Count;
+            foreach (var child in parent.SubTasks)
             {
-                count++;
-                pos++;
+                count += CountDescendants(child);
             }
             return count;
         }
+
 
         private bool IsDescendant(TaskViewModel child, TaskViewModel ancestor)
         {
@@ -92,19 +91,16 @@ namespace Universal_Planner.Pages
             return false;
         }
 
-        // 2.1  кладём ссылку на VM в DataPackage
-        private void TaskListView_DragItemsStarting(object sender,
-                                                    DragItemsStartingEventArgs e)
+        private void TaskListView_DragItemsStarting(object sender, DragItemsStartingEventArgs e)
         {
             if (e.Items.Count == 0) return;
 
             int index = TaskListView.Items.IndexOf(e.Items[0]);
             e.Data.SetText(index.ToString());
-            e.Data.RequestedOperation =
-                Windows.ApplicationModel.DataTransfer.DataPackageOperation.Move;
+            e.Data.RequestedOperation = DataPackageOperation.Move;
         }
 
-        // 2. Subtask зона принимает только Move
+
         private void SubtaskZone_DragOver(object sender, DragEventArgs e)
         {
             if (e.DataView.Contains(StandardDataFormats.Text))
@@ -113,7 +109,6 @@ namespace Universal_Planner.Pages
                 e.AcceptedOperation = DataPackageOperation.None;
         }
 
-        // 3. Drop → превращаем выбранную задачу в «дитя» текущего SelectedItem
         private async void SubtaskZone_Drop(object sender, DragEventArgs e)
         {
             var def = e.GetDeferral();
@@ -128,45 +123,41 @@ namespace Universal_Planner.Pages
 
             var child = list[oldIndex];
 
-            // если уже потомок выбранного – ничего
             if (IsDescendant(child, parent) || child == parent)
             { def.Complete(); return; }
 
-            // 1) снимаем старую связь и удаляем блок потомков из списка
-            RemoveWithDescendants(child);
-
-            // 2) вычисляем новую позицию = конец блока потомков родителя
-            int insertPos = list.IndexOf(parent) + 1 + CountDescendants(parent);
-
-            list.Insert(insertPos, child);
-            child.AttachToParent(parent);
+            list.RemoveAt(oldIndex);
+            parent.AddSubTask(child);
 
             def.Complete();
         }
 
-        // удаляет элемент и всех его потомков
         private void RemoveWithDescendants(TaskViewModel item)
         {
-            var list = GlobalData.Instance.TaskViewList;
-            int start = list.IndexOf(item);
-            int count = 1 + CountDescendants(item);
-            for (int i = start; i < count; i++) GlobalData.Instance.DeleteTask(GlobalData.Instance.TaskViewList[i].Id);
-        }
-
-
-        // 2.2  показываем, что зона принимает «Move»
-        private void TrashZone_DragOver(object sender, DragEventArgs e)
-        {
-            if (e.DataView.Contains(Windows.ApplicationModel.DataTransfer.StandardDataFormats.Text))
+            if (item.Parent != null)
             {
-                e.AcceptedOperation = Windows.ApplicationModel.DataTransfer.DataPackageOperation.Move;
-                TrashZone.Opacity = 0.8;          // визуальная подсветка
+                item.Parent.RemoveSubTask(item);
             }
             else
-                e.AcceptedOperation = Windows.ApplicationModel.DataTransfer.DataPackageOperation.None;
+            {
+                GlobalData.Instance.TaskViewList.Remove(item);
+                GlobalData.Instance.DeleteTask(item.Id);
+            }
         }
 
-        // 2.3  по Drop удаляем задачу из коллекции
+
+        private void TrashZone_DragOver(object sender, DragEventArgs e)
+        {
+            if (e.DataView.Contains(StandardDataFormats.Text))
+            {
+                e.AcceptedOperation = DataPackageOperation.Move;
+                TrashZone.Opacity = 0.8;
+            }
+            else
+                e.AcceptedOperation = DataPackageOperation.None;
+        }
+
+
         private async void TrashZone_Drop(object sender, DragEventArgs e)
         {
             TrashZone.Opacity = 1;
@@ -180,6 +171,27 @@ namespace Universal_Planner.Pages
                 RemoveWithDescendants(list[index]);
 
             def.Complete();
+        }
+        private void AddTagButton_Click(object sender, RoutedEventArgs e)
+        {
+            var btn = (Button)sender;
+            // Создаём меню на лету
+            var flyout = new MenuFlyout();
+
+            foreach (var tag in GlobalData.Instance.TagViewLList)
+            {
+                var mi = new MenuFlyoutItem { Text = tag.Name, Tag = tag };
+                mi.Click += (s, ev) =>
+                {
+                    if (TaskListView.SelectedItem is TaskViewModel vm)
+                        vm.AddTag((UTag)mi.Tag);
+                };
+                flyout.Items.Add(mi);
+            }
+
+            // Показываем рядом с кнопкой
+            btn.Flyout = flyout;
+            flyout.ShowAt(btn);
         }
     }
 }

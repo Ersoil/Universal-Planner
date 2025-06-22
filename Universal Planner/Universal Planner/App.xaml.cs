@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Universal_Planner.Componets.viewModels;
 
 namespace Universal_Planner
 {
@@ -29,6 +30,7 @@ namespace Universal_Planner
         public App()
         {
             this.InitializeComponent();
+            var data = GlobalData.Instance;
             this.Suspending += OnSuspending;
         }
 

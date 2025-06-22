@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Collections.Generic;
 
 namespace Universal_Planner.Componets.Models
 {
@@ -15,7 +16,14 @@ namespace Universal_Planner.Componets.Models
         public string Name { get; set; }
         public string Color { get; set; }
 
-        // Связь многие-ко-многим с задачами
-        public virtual ICollection<UTask> Tasks { get; set; } = new List<UTask>();
+        // Навигация many-to-many
+        public virtual ICollection<UTaskTag> TaskTags { get; set; }
+            = new List<UTaskTag>();
+
+        public UTag() { }
+        public UTag(int id, string name, string color)
+        {
+            Id = id; Name = name; Color = color;
+        }
     }
 }

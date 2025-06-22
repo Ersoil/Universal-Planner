@@ -1,4 +1,4 @@
-﻿<Page
+﻿<Page x:ConnectionId='1'
     x:Class="Universal_Planner.Componets.Pages.Statistics"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -71,33 +71,25 @@
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2">
             <TextBlock Text="Последняя активность" FontWeight="ExtraLight" FontSize="26"/>
-            <VariableSizedWrapGrid MinHeight="300" Margin="15" Background="{ThemeResource SystemControlBackgroundChromeMediumBrush}" MaximumRowsOrColumns="4">
-                <StackPanel Orientation="Horizontal" Margin="5">
-                    <Grid Background="{ThemeResource SystemAccentColor}" MinWidth="120">
-                        <TextBlock Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" Text="18:40 26.07.2025:"/>
-                    </Grid>
-                    <TextBlock Margin="15,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Удалена задача 'TaskName'"/>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal" Margin="5">
-                    <Grid Background="{ThemeResource SystemAccentColor}" MinWidth="120">
-                        <TextBlock Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" Text="18:40 26.07.2025:"/>
-                    </Grid>
-                    <TextBlock Margin="15,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Удалена задача 'TaskName'"/>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal" Margin="5">
-                    <Grid Background="{ThemeResource SystemAccentColor}" MinWidth="120">
-                        <TextBlock Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" Text="18:40 26.07.2025:"/>
-                    </Grid>
-                    <TextBlock Margin="15,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Удалена задача 'TaskName'"/>
-                </StackPanel>
-                    <StackPanel Orientation="Horizontal" Margin="5">
-                        <Grid Background="{ThemeResource SystemAccentColor}" MinWidth="120">
-                            <TextBlock Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" Text="18:40 26.07.2025:"/>
-                        </Grid>
-                        <TextBlock Margin="15,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Удалена задача 'TaskName'"/>
-                    </StackPanel>
+                <VariableSizedWrapGrid MinHeight="300" Margin="15" 
+                      Background="{ThemeResource SystemControlBackgroundChromeMediumBrush}" 
+                      MaximumRowsOrColumns="4">
+                    <ItemsControl x:ConnectionId='2'                                         >
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal" Margin="5">
+                                    <Grid Background="{ThemeResource SystemAccentColor}" MinWidth="120">
+                                        <TextBlock Foreground="White" VerticalAlignment="Center" 
+                                  HorizontalAlignment="Center" Text="{Binding LogDateTime}"/>
+                                    </Grid>
+                                    <TextBlock Margin="15,0,0,0" VerticalAlignment="Center" 
+                              HorizontalAlignment="Center" Text="{Binding LogDescription}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
                 </VariableSizedWrapGrid>
-        </StackPanel>
+            </StackPanel>
             <Viewbox Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" VerticalAlignment="Top" MinHeight="800">
             <StackPanel Margin="0,0,15,0">
                 <TextBlock Text="Сводка" FontWeight="ExtraLight" FontSize="26"/>

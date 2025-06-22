@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Universal_Planner.Componets.Models;
+using Universal_Planner.Componets.viewModels;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -22,6 +25,7 @@ namespace Universal_Planner.Pages
     /// </summary>
     public sealed partial class StartScreen : Page
     {
+        public ObservableCollection<Log> Logs = GlobalData.Instance.LogList;
         public StartScreen()
         {
             this.InitializeComponent();

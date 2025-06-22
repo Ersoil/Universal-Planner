@@ -12,12 +12,12 @@
         <Button RelativePanel.AlignRightWithPanel="True" Width="50" Height="50" VerticalAlignment="Center" Background="Transparent">
             <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE713;"></FontIcon>
         </Button>
-        <VariableSizedWrapGrid x:Name="ContentGrid" Orientation="Horizontal" MaximumRowsOrColumns="12" ItemHeight="200" ItemWidth="200" 
+        <VariableSizedWrapGrid x:Name="ContentGrid" Orientation="Horizontal" MaximumRowsOrColumns="12" ItemHeight="250" ItemWidth="150" 
                                RelativePanel.AlignBottomWithPanel="True" 
                                RelativePanel.AlignRightWithPanel="True" 
                                RelativePanel.AlignLeftWithPanel="True" 
                                RelativePanel.Below="Header">
-            <StackPanel VariableSizedWrapGrid.ColumnSpan="3" VariableSizedWrapGrid.RowSpan="3">
+            <StackPanel VariableSizedWrapGrid.ColumnSpan="3" VariableSizedWrapGrid.RowSpan="1">
                 <TextBlock Text="Частые действия" FontWeight="ExtraLight" FontSize="26"/>
                 <VariableSizedWrapGrid MaximumRowsOrColumns="2" ItemHeight="90" ItemWidth="190">
                     <Button Foreground="White" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" VariableSizedWrapGrid.ColumnSpan="1" Margin="2" VariableSizedWrapGrid.RowSpan="2" 
@@ -64,36 +64,30 @@
 
                     </Button>
                 </VariableSizedWrapGrid>
+              
             </StackPanel>
-            <StackPanel VariableSizedWrapGrid.ColumnSpan="3" VariableSizedWrapGrid.RowSpan="3">
-                <TextBlock Text="Последняя активность" FontWeight="ExtraLight" FontSize="26"/>
-                <VariableSizedWrapGrid MinHeight="300" Margin="15"  MaximumRowsOrColumns="4">
-                    <StackPanel Orientation="Horizontal" Margin="5">
-                        <Grid Background="{ThemeResource SystemAccentColor}" MinWidth="120">
-                            <TextBlock Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" Text="18:40 26.07.2025:"/>
-                        </Grid>
-                        <TextBlock Margin="15,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Удалена задача 'TaskName'"/>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal" Margin="5">
-                        <Grid Background="{ThemeResource SystemAccentColor}" MinWidth="120">
-                            <TextBlock Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" Text="18:40 26.07.2025:"/>
-                        </Grid>
-                        <TextBlock Margin="15,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Удалена задача 'TaskName'"/>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal" Margin="5">
-                        <Grid Background="{ThemeResource SystemAccentColor}" MinWidth="120">
-                            <TextBlock Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" Text="18:40 26.07.2025:"/>
-                        </Grid>
-                        <TextBlock Margin="15,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Удалена задача 'TaskName'"/>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal" Margin="5">
-                        <Grid Background="{ThemeResource SystemAccentColor}" MinWidth="120">
-                            <TextBlock Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" Text="18:40 26.07.2025:"/>
-                        </Grid>
-                        <TextBlock Margin="15,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Удалена задача 'TaskName'"/>
-                    </StackPanel>
-                </VariableSizedWrapGrid>
+            <ScrollViewer VariableSizedWrapGrid.ColumnSpan="4" VariableSizedWrapGrid.RowSpan="2">
+            <StackPanel >
+                    <TextBlock Text="Последняя активность" FontWeight="ExtraLight" FontSize="26"/>
+                    <Grid MinHeight="300" Margin="15">
+                        <ItemsControl ItemsSource="{x:Bind Logs, Mode=OneWay}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal" Margin="5">
+                                        <Grid Background="{ThemeResource SystemAccentColor}" MinWidth="120">
+                                            <TextBlock Foreground="White" VerticalAlignment="Center" 
+                                  HorizontalAlignment="Center" Text="{Binding LogDateTime}"/>
+                                        </Grid>
+                                        <TextBlock Margin="15,0,0,0" VerticalAlignment="Center" 
+                              HorizontalAlignment="Center" Text="{Binding LogDescription}"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </Grid> 
+                
             </StackPanel>
+            </ScrollViewer>
         </VariableSizedWrapGrid>
     </RelativePanel>  
 </Page>

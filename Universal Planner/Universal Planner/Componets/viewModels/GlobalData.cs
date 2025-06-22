@@ -3,6 +3,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using Universal_Planner.Componets.Models;
 using Universal_Planner.Componets.Data;
+using System.Threading.Tasks;
 
 namespace Universal_Planner.Componets.viewModels
 {
@@ -11,6 +12,7 @@ namespace Universal_Planner.Componets.viewModels
         public ObservableCollection<TaskViewModel> TaskViewList { get; set; }
         public ObservableCollection<UTag> TagViewLList { get; set; }
         public ObservableCollection<Uuser> UserViewLList { get; set; }
+        public ObservableCollection<Log> LogList { get; set; }
         private static GlobalData _Instance;
         private readonly AppDbContext _dbContext;
 
@@ -22,9 +24,16 @@ namespace Universal_Planner.Componets.viewModels
             // Загружаем задачи из базы данных
             var tasks = _dbContext.Tasks.ToList();
             TaskViewList = new ObservableCollection<TaskViewModel>(
-                tasks.Select(t => new TaskViewModel(t)));
-
-            TagViewLList = new ObservableCollection<UTag>();
+                tasks.Select(t => new TaskViewModel(t).Parent == null ? new TaskViewModel(t):null));
+            var logs = _dbContext.Logs.ToList();
+            LogList = new ObservableCollection<Log>(logs);
+            EventBus.onLogChanged += addLog;
+            TagViewLList = new ObservableCollection<UTag>
+        {
+            new UTag(1,"Work","#0078D7"),
+            new UTag(2,"Personal","#E81123"),
+            new UTag(3,"Urgent","#FF8C00")
+        };
             UserViewLList = new ObservableCollection<Uuser>();
         }
 
@@ -39,12 +48,19 @@ namespace Universal_Planner.Componets.viewModels
                 return _Instance;
             }
         }
+        public void addLog(string Description)
+        {
+            Log log = new Log(Description);
+            _dbContext.Logs.Add(log);
+            _dbContext.SaveChanges();
+            LogList.Add(log);
+        }
 
         // Методы для работы с базой данных
         public void AddTask(UTask task)
         {
             _dbContext.Tasks.Add(task);
-            _dbContext.SaveChanges();
+            
             TaskViewList.Add(new TaskViewModel(task));
         }
 
@@ -52,15 +68,6 @@ namespace Universal_Planner.Componets.viewModels
         {
             _dbContext.Tasks.Update(task);
             _dbContext.SaveChanges();
-
-            // Обновляем ViewModel
-            var vm = TaskViewList.FirstOrDefault(t => t.Id == task.Id);
-            if (vm != null)
-            {
-                vm.Title = task.Title;
-                vm.Description = task.Description;
-                vm.DueDate = task.DueDate;
-            }
         }
 
         public void DeleteTask(int taskId)
@@ -77,6 +84,12 @@ namespace Universal_Planner.Componets.viewModels
                     TaskViewList.Remove(vm);
                 }
             }
+            EventBus.onLogChanged?.Invoke($"Удалена задача'{task.DueDate}'");
+        }
+
+        internal Task DeleteTaskAsync(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -20,6 +20,7 @@ namespace Universal_Planner.Pages
 {
     public sealed partial class SettingsPage : Page
     {
+        private string initialTag = null;
         private enum Section
         {
             General,
@@ -36,15 +37,40 @@ namespace Universal_Planner.Pages
             Debug.WriteLine("SettingsPage ctor");        // ① ctor
             this.Loaded += OnPageLoaded;
         }
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+
+            if (e.Parameter is string tag)
+            {
+                initialTag = tag;
+                Debug.WriteLine($"[SettingsPage] Received navigation parameter: {initialTag}");
+            }
+        }
 
         private void OnPageLoaded(object sender, RoutedEventArgs e)
         {
-            Debug.WriteLine("OnPageLoaded fired");       // ② Loaded
-                                                         // Установим дефолтный выбор
+            Debug.WriteLine("OnPageLoaded fired");
+
+            if (!string.IsNullOrEmpty(initialTag))
+            {
+                foreach (var item in SettingsList.Items)
+                {
+                    if (item is ListViewItem li && li.Tag?.ToString() == initialTag)
+                    {
+                        SettingsList.SelectedItem = li;
+                        Debug.WriteLine($"[SettingsPage] Auto-selected: {initialTag}");
+                        return;
+                    }
+                }
+
+                Debug.WriteLine($"[SettingsPage] Tag '{initialTag}' not found. Fallback to default.");
+            }
+
             if (SettingsList.Items.Count > 0)
             {
                 SettingsList.SelectedIndex = 0;
-                Debug.WriteLine("SelectedIndex set to 0");
+                Debug.WriteLine("Fallback: SelectedIndex set to 0");
             }
             else
             {
