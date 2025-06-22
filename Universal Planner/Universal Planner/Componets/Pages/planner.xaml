@@ -82,7 +82,7 @@
                                        Converter={StaticResource BoolToIndent}}"/>
                                         </RelativePanel.RenderTransform>
 
-                                        <StackPanel Margin="20 10 0 0">
+                                        <StackPanel Margin="20 30 0 0">
                                             <TextBlock Text="{Binding Title}" 
                                    FontSize="14" 
                                    FontWeight="ExtraLight" 
@@ -92,34 +92,39 @@
                                    TextTrimming="CharacterEllipsis" 
                                    Margin="40,10,0,10"/>
                                         </StackPanel>
-                                        <Button Background="{ThemeResource SystemAccentColor}" 
-                            Foreground="White" 
-                            MinWidth="90" 
-                            Margin="0,0,20,0" 
-                            RelativePanel.AlignRightWithPanel="True" 
-                            RelativePanel.AlignTopWithPanel="True">
-                                            <FontIcon HorizontalAlignment="Stretch" 
-                                  FontSize="12" 
-                                  Glyph="&#xE1CB;"/>
-                                            <Button.Flyout>
-                                                <Flyout>
-                                                    <ItemsControl ItemsSource="{Binding Tags}">
-                                                        <ItemsControl.ItemsPanel>
-                                                            <ItemsPanelTemplate>
-                                                                <StackPanel Orientation="Horizontal"/>
-                                                            </ItemsPanelTemplate>
-                                                        </ItemsControl.ItemsPanel>
-                                                        <ItemsControl.ItemTemplate>
-                                                            <DataTemplate>
-                                                                <Border Background="{Binding Color}" Padding="4" Margin="0,0,4,4">
-                                                                    <TextBlock Text="{Binding Name}" Foreground="White" FontSize="10"/>
-                                                                </Border>
-                                                            </DataTemplate>
-                                                        </ItemsControl.ItemTemplate>
-                                                    </ItemsControl>
-                                                </Flyout>
-                                            </Button.Flyout>
-                                        </Button>
+                                        <ItemsControl x:Name="TagStack" ItemsSource="{Binding Tags}" Background="{ThemeResource SystemAccentColor}" 
+                                        Foreground="White" 
+                                        MinWidth="90" 
+                                        Margin="0,0,20,0" 
+                                        RelativePanel.AlignRightWithPanel="True" 
+                                        RelativePanel.AlignTopWithPanel="True">
+                                            <ItemsControl.ItemsPanel>
+                                                <ItemsPanelTemplate>
+                                                    <StackPanel Orientation="Horizontal"/>
+                                                </ItemsPanelTemplate>
+                                            </ItemsControl.ItemsPanel>
+                                            <ItemsControl.ItemTemplate>
+                                                <DataTemplate>
+                                                    <Border Background="{Binding Color}" Padding="4" Margin="0,0,4,4">
+                                                        <TextBlock Text="{Binding Name}" Foreground="White" FontSize="10"/>
+                                                    </Border>
+                                                </DataTemplate>
+                                            </ItemsControl.ItemTemplate>
+                                        </ItemsControl>
+                                        <StackPanel RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignTopWithPanel="True" MaxHeight="20" Orientation="Horizontal">
+                                            <TextBlock Text="Приоритеты:" FontSize="10" Margin="0 0 5 0"/>
+                                            <Border x:Name="Expl" Background="{ThemeResource SystemAccentColorLight1}" Margin="0 0 5 0">
+                                                <TextBlock Text="{Binding ExplicitPriority}" Foreground="White" FontSize="10"/>
+                                            </Border>
+                                            <Border Background="{ThemeResource SystemAccentColorLight2}" Margin="0 0 5 0">
+                                                <TextBlock Text="{Binding TemporalPriority}" Foreground="White" FontSize="10"/>
+                                            </Border>
+                                        </StackPanel>
+                                        <Border RelativePanel.AlignBottomWithPanel="True" 
+                                        RelativePanel.AlignLeftWithPanel="true" 
+                                        RelativePanel.AlignRightWithPanel="True" 
+                                        BorderBrush="{ThemeResource SystemAccentColor}" 
+                                        BorderThickness="3"/>
                                         <TextBlock Text="{Binding DueDate,
                                      Converter={StaticResource DateTimeFmt}}"
                                FontSize="12"
@@ -157,35 +162,26 @@
                                                TextTrimming="CharacterEllipsis" 
                                                Margin="40,10,0,10"/>
                                                     </StackPanel>
-                                                    <Button Background="{ThemeResource SystemAccentColor}" 
+                                                    <ItemsControl ItemsSource="{Binding Tags}" Background="{ThemeResource SystemAccentColor}" 
                                         Foreground="White" 
                                         MinWidth="90" 
                                         Margin="0,0,20,0" 
                                         RelativePanel.AlignRightWithPanel="True" 
                                         RelativePanel.AlignTopWithPanel="True">
-                                                        <FontIcon HorizontalAlignment="Stretch" 
-                                              FontSize="12" 
-                                              Glyph="&#xE1CB;"/>
-                                                        <Button.Flyout>
-                                                            <Flyout>
-                                                                <ItemsControl ItemsSource="{Binding Tags}">
-                                                                    <ItemsControl.ItemsPanel>
-                                                                        <ItemsPanelTemplate>
-                                                                            <StackPanel Orientation="Horizontal"/>
-                                                                        </ItemsPanelTemplate>
-                                                                    </ItemsControl.ItemsPanel>
-                                                                    <ItemsControl.ItemTemplate>
-                                                                        <DataTemplate>
-                                                                            <Border Background="{Binding Color}" Padding="4" Margin="0,0,4,4">
-                                                                                <TextBlock Text="{Binding Name}" Foreground="White" FontSize="10"/>
-                                                                            </Border>
-                                                                        </DataTemplate>
-                                                                    </ItemsControl.ItemTemplate>
-                                                                </ItemsControl>
-                                                            </Flyout>
-                                                        </Button.Flyout>
-                                                    </Button>
-                                                    <TextBlock Text="{Binding DueDate,
+                                                                <ItemsControl.ItemsPanel>
+                                                                    <ItemsPanelTemplate>
+                                                                        <StackPanel Orientation="Horizontal"/>
+                                                                    </ItemsPanelTemplate>
+                                                                </ItemsControl.ItemsPanel>
+                                                                <ItemsControl.ItemTemplate>
+                                                                    <DataTemplate>
+                                                                        <Border Background="{Binding Color}" Padding="4" Margin="0,0,4,4">
+                                                                            <TextBlock Text="{Binding Name}" Foreground="White" FontSize="10"/>
+                                                                        </Border>
+                                                                    </DataTemplate>
+                                                                </ItemsControl.ItemTemplate>
+                                                            </ItemsControl>
+                                                            <TextBlock Text="{Binding DueDate,
                                                      Converter={StaticResource DateTimeFmt}}"
                                            FontSize="12"
                                            Margin="10"
@@ -250,14 +246,32 @@
                     </Grid>
                     <StackPanel Orientation="Horizontal">
                         <CheckBox Content="Выполнено" IsChecked="{Binding IsCompleted, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="15,10,0,10"/>
-                        <Button>
-                            <FontIcon Glyph="&#xE735;"/>
+                        <Button Margin="5,0,5,0">
+                            <StackPanel Orientation="Horizontal">
+                                <FontIcon Glyph="&#xE735;" Margin="0,0,5,0"></FontIcon>
+                                <TextBlock Text="Приоритет явный" FontSize="12" Margin="5"/>
+                            </StackPanel>
                             <Button.Flyout>
                                 <MenuFlyout>
+                                    <MenuFlyoutItem>Наивысший</MenuFlyoutItem>
                                     <MenuFlyoutItem>Высокий</MenuFlyoutItem>
                                     <MenuFlyoutItem>Средний</MenuFlyoutItem>
                                     <MenuFlyoutItem>Низкий</MenuFlyoutItem>
-                                    <MenuFlyoutItem>Наивысший</MenuFlyoutItem>
+                                </MenuFlyout>
+                            </Button.Flyout>
+                        </Button>
+                        <Button Width="177">
+                            <StackPanel Orientation="Horizontal">
+                                <FontIcon Glyph="&#xE734;" Margin="0,0,5,0"/>
+                                <TextBlock Text="Приоритет временной" FontSize="12" Margin="5"/>
+                            </StackPanel>
+                            <Button.Flyout>
+                                <MenuFlyout>
+                                    <MenuFlyoutItem>Сейчас</MenuFlyoutItem>
+                                    <MenuFlyoutItem>Сегодня</MenuFlyoutItem>
+                                    <MenuFlyoutItem>Завтра</MenuFlyoutItem>
+                                    <MenuFlyoutItem>На неделе</MenuFlyoutItem>
+                                    <MenuFlyoutItem>В этом месяце</MenuFlyoutItem>
                                 </MenuFlyout>
                             </Button.Flyout>
                         </Button>

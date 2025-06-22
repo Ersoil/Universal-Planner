@@ -192,7 +192,34 @@ namespace Universal_Planner.Componets.viewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
         }
 
-        // Метод для получения модели (может пригодиться)
         public UTask GetModel() => ModelTask;
+
+            private string _explicitPriority = "Средний";
+            public string ExplicitPriority
+            {
+                get => _explicitPriority;
+                set
+                {
+                    if (value != _explicitPriority)
+                    {
+                        _explicitPriority = value;
+                        onPropertyChanged(nameof(ExplicitPriority));
+                    }
+                }
+            }
+
+            private string _temporalPriority = "Сегодня";
+            public string TemporalPriority
+            {
+                get => _temporalPriority;
+                set
+                {
+                    if (value != _temporalPriority)
+                    {
+                        _temporalPriority = value;
+                        onPropertyChanged(nameof(TemporalPriority));
+                    }
+                }
+            }
     }
 }

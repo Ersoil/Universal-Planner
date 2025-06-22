@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-06-22T04:34:38.649</Modified>
+      <Modified>2025-06-22T11:44:01.461</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Universal Planner.exe">
       <PackagePath>entrypoint\Universal Planner.exe</PackagePath>
-      <Modified>2025-06-22T04:34:37.905</Modified>
+      <Modified>2025-06-22T11:44:00.776</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\.nuget\packages\microsoft.aspnetcore.hosting.abstractions\1.1.3\lib\netstandard1.3\Microsoft.AspNetCore.Hosting.Abstractions.dll">
       <PackagePath>Microsoft.AspNetCore.Hosting.Abstractions.dll</PackagePath>
@@ -845,7 +845,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Universal Planner.xr.xml">
       <PackagePath>Universal Planner.xr.xml</PackagePath>
-      <Modified>2025-06-22T04:34:37.594</Modified>
+      <Modified>2025-06-22T07:55:40.517</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
@@ -853,7 +853,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Componets\Pages\planner.xbf">
       <PackagePath>Componets\Pages\planner.xbf</PackagePath>
-      <Modified>2025-06-22T04:34:37.622</Modified>
+      <Modified>2025-06-22T11:44:00.537</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Componets\Pages\PomodoroPage.xbf">
       <PackagePath>Componets\Pages\PomodoroPage.xbf</PackagePath>
@@ -873,11 +873,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Componets\Pages\Statistics.xbf">
       <PackagePath>Componets\Pages\Statistics.xbf</PackagePath>
-      <Modified>2025-06-22T02:08:48.852</Modified>
+      <Modified>2025-06-22T11:38:37.286</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Componets\Resources\main.xbf">
       <PackagePath>Componets\Resources\main.xbf</PackagePath>
-      <Modified>2025-06-22T04:34:37.622</Modified>
+      <Modified>2025-06-22T11:44:00.537</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
@@ -897,7 +897,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ersoil\Desktop\Universal Planner\Universal Planner\Universal Planner\bin\x64\Debug\Core\Universal Planner.exe">
       <PackagePath>Universal Planner.exe</PackagePath>
-      <Modified>2025-06-22T04:34:38.641</Modified>
+      <Modified>2025-06-22T11:44:01.452</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
